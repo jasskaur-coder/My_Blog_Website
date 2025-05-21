@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Day 2 – Tired but Trying | DailyU Blog</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../images/favicon.png" type="image/png" />
+  <style>
+    .date {
+      color: #0ff;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+    .game {
+      background: #1c1c1c;
+      padding: 1.5rem;
+      border-left: 5px solid #0ff;
+      border-radius: 12px;
+      margin-top: 2rem;
+      color: #ddd;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: none;
+      background: #222;
+      color: #eee;
+    }
+    button {
+      background-color: #0ff;
+      color: #111;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #00cccc;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Day 2 – Tired but Trying</h1>
+    <nav><a href="../index.html">← Back</a></nav>
+  </header>
+
+  <main class="container">
+    <article>
+      <p class="date">May 21, 2025</p>
+
+      <!-- Blog content -->
+      <section>
+        <p>Today was… a lot.<br>
+        Honestly, it felt like one of those days where everything just drains you. I was tired, overwhelmed, and yeah — a little tormented by the pressure of <strong>exams</strong> (why do they always feel like boss fights in a game you didn’t sign up for? 😩).</p>
+
+        <p>But here’s the thing — I know I’ve got to <strong>keep going</strong>. Even when it’s tough. Even when I feel like stopping.</p>
+      </section>
+
+      <!-- Tech Check-In -->
+      <section>
+        <h3>📚 Tech Check-In</h3>
+        <p>Despite the chaos, I did sneak in some tech learning (because… Python 📍 is part of the syllabus 😅).<br>
+        Today, I explored something new: <strong>offset values</strong> in Python! It was short but sweet — and honestly, small wins like these help keep me grounded.</p>
+      </section>
+
+      <!-- Reflection -->
+      <section>
+        <h3>💭 Reflection</h3>
+        <p>Some days won’t feel productive. Some days will test your patience.<br>
+        But progress is progress — even if it’s just showing up.</p>
+
+        <p>🗨️ <em>How do <strong>you</strong> push through tough days?</em> Let me know through my contact form!</p>
+      </section>
+
+      <!-- Mini Game Section -->
+      <section class="game">
+        <h3>🎮 Mini Game: Guess the Tech Word!</h3>
+        <p>I’m thinking of a tech word. You’ve got <strong>3 tries</strong> to guess it!</p>
+        <p><strong>Hint:</strong> A common 6-letter word used in web development.</p>
+        <input type="text" id="guessInput" placeholder="Your guess here..." />
+        <button onclick="checkGuess()">Submit</button>
+        <p id="guessFeedback" style="margin-top:1rem;"></p>
+        <p id="guessTries"></p>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2025 DailyU Blog</p>
+  </footer>
+
+  <script>
+    // Mini Game Script
+    let secretWord = "script"; // you can change this to other words
+    let attempts = 3;
+
+    function checkGuess() {
+      const input = document.getElementById("guessInput");
+      const feedback = document.getElementById("guessFeedback");
+      const tries = document.getElementById("guessTries");
+      const guess = input.value.trim().toLowerCase();
+
+      if (!guess) {
+        feedback.textContent = "Please enter a guess!";
+        return;
+      }
+
+      if (guess === secretWord) {
+        feedback.innerHTML = "🎉 Correct! You guessed it right!";
+        input.disabled = true;
+      } else {
+        attempts--;
+        if (attempts === 0) {
+          feedback.innerHTML = `❌ Oops! The word was <strong>${secretWord}</strong>. Better luck next time!`;
+          input.disabled = true;
+        } else {
+          feedback.textContent = guess.length < secretWord.length
+            ? "Too short! Try again."
+            : "Not quite! Keep guessing.";
+        }
+      }
+
+      tries.textContent = `🔁 Attempts left: ${attempts}`;
+    }
+  </script>
+</body>
+</html>
