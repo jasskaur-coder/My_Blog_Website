@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Day 3 – A Lil Better, Tech Glitches & Park Peace | DailyU Blog</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../images/favicon.png" type="image/png" />
+
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      margin: 0;
+      padding: 1rem;
+    }
+
+    header, footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      background-color: #111;
+      color: #eee;
+      padding: 1rem;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    footer {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      flex-grow: 1;
+      color: #0cc;
+    }
+
+    nav a {
+      color: #0ff; /* neon cyan in dark mode */
+      text-decoration: none;
+      margin-right: 1rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      text-decoration: underline;
+      color: #0cc;
+    }
+
+    .date {
+      color: #0ff; /* neon blue */
+      font-style: italic;
+      margin-bottom: 1rem;
+      transition: color 0.3s ease;
+    }
+      
+
+     .date {
+    color: #0ff; /* neon blue */
+    font-style: italic;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  /* Updated date color for light mode */
+  body.light-mode .date {
+    color: #333; /* dark gray for readability on light background */
+  }
+    .section-box {
+      background: #111;
+      padding: 1.5rem;
+      border-left: 5px solid #f0c;
+      border-radius: 12px;
+      margin-top: 2rem;
+      color: #eee;
+      transition: background-color 0.3s ease, color 0.3s ease, border-left-color 0.3s ease;
+    }
+    .section-box h3 {
+      margin-top: 0;
+    }
+    img.park {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px #0ff8;
+      margin-top: 1rem;
+      transition: box-shadow 0.3s ease;
+    }
+    button {
+      background-color: #0ff;
+      color: #111;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 0;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      white-space: nowrap;
+    }
+    button:hover {
+      background-color: #00cccc;
+      color: #000;
+    }
+
+    /* Light mode styles */
+    body.light-mode {
+      background-color: #f0f0f0;
+      color: #111;
+    }
+
+    body.light-mode header {
+      background-color: #fff;
+      color: #000 !important;
+    }
+
+    body.light-mode header h1,
+    body.light-mode header nav a,
+    body.light-mode header button {
+    color: #000 !important;
+    }
+
+    body.light-mode footer {
+      background-color: #f0f0f0;
+      color: #111;
+    }
+
+    body.light-mode .section-box {
+      background: #fff;
+      color: #222;
+      border-left-color: #f06;
+      box-shadow: 0 0 12px #f06a;
+    }
+
+    body.light-mode img.park {
+      box-shadow: 0 0 12px #d006;
+    }
+
+    /* Nav link and button colors for light mode: readable, not neon */
+    body.light-mode nav a {
+      color: #005577; /* darker blue, easy to read on light bg */
+    }
+    body.light-mode nav a:hover {
+      color: #003344;
+    }
+    body.light-mode button {
+      background-color: #005577;
+      color: #fff;
+    }
+    body.light-mode button:hover {
+      background-color: #003344;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Day 4 – A Lil Better, Tech Glitches & Park Peace</h1>
+    <nav>
+      <a href="../index.html">← Back</a>
+    </nav>
+    <button id="toggleModeBtn" aria-label="Toggle Dark/Light Mode">Dark/Light Mode</button>
+  </header>
+
+  <main class="container">
+    <article>
+      <p class="date">May 23, 2025</p>
+
+      <section>
+        <p>Today felt... a bit better. Not sunshine-and-rainbows better, but just enough to breathe and keep going.</p>
+        <p>I started the day with <strong>maths</strong> — which used to be one of my fav subjects. But these days? Can’t say the same. Still, I tried. That's what matters, right?</p>
+      </section>
+
+      <section class="section-box">
+        <h3>💻 Tech Stack Trials</h3>
+        <p>I attempted to level up my blog website — tried adding a dark/light toggle switch. And surprise surprise... it <em>worked</em> 😎</p>
+        <p>Despite all the other stuff going on, I still managed to add the toggle button <strong>on this blog page only</strong> for now. Will implement it on the full website as soon as possible!</p>
+        <p>Buuut my obsession with perfection made me drop it midway. It wasn’t looking exactly how I imagined, and I couldn’t settle. As mom always says, “If something’s bugging you, pause. Come back later.” So I listened to her. For once. 😅</p>
+      </section>
+
+      <section class="section-box">
+        <h3>💭 Real Talk</h3>
+        <p>Python? Yup, showed up again today — part of the syllabus grind. Not something that thrilled me, but I did it anyway. No skipping.</p>
+        <p>More than anything, I’m learning to move forward. Even when it’s hard. Even when I feel like I’ve failed. Because honestly, giving my best is the only option left on the table.</p>
+      </section>
+
+      <section class="section-box">
+        <h3>🌳 Park Peace</h3>
+        <p>I went to the NITJ park today. And ohhh, those little kids, laughing and running around? Their joy is so pure. I literally paused and smiled like a fool. It’s these tiny moments that remind me — life still has softness, even on tough days.</p>
+        <img src="../images/nitj-park.jpg" alt="NITJ Park – Evening" class="park" />
+        <p style="font-style: italic; font-size: 0.9rem;">Captured: 23/05/2025, 6:59 PM. liitle children, big smiles. 😊</p>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2025 DailyU Blog</p>
+  </footer>
+
+  <script>
+    // Dark/Light Mode Toggle Script
+    const toggleBtn = document.getElementById('toggleModeBtn');
+    const body = document.body;
+
+    // Load mode from localStorage if set
+    if(localStorage.getItem('mode') === 'light') {
+      body.classList.add('light-mode');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+      if(body.classList.contains('light-mode')) {
+        localStorage.setItem('mode', 'light');
+      } else {
+        localStorage.setItem('mode', 'dark');
+      }
+    });
+  </script>
+
+</body>
+</html>
