@@ -16,20 +16,62 @@
       padding: 1rem;
     }
 
-    header, footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 1rem;
-      flex-wrap: wrap;
+    header {
       background-color: #111;
       color: #eee;
       padding: 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      color: #0cc;
+      text-align: center;
+    }
+
+    .header-second-line {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-top: 1rem;
+    }
+
+    .back-center {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .header-second-line button {
+      position: absolute;
+      right: 0;
+      background-color: #0ff;
+      color: #111;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
+    .header-second-line button:hover {
+      background-color: #00cccc;
+      color: #000;
+    }
+
+    nav a {
+      color: #0ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #0cc;
+    }
+
     footer {
-      display: block;
       width: 100%;
       text-align: center;
       margin-top: 2rem;
@@ -37,44 +79,17 @@
       color: #888;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2 rem;
-      flex-grow: 1;
-      color: #0cc;
-    }
-
-    nav a {
-      color: #0ff; /* neon cyan in dark mode */
-      text-decoration: none;
-      margin-right: 1rem;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      text-decoration: underline;
-      color: #0cc;
-    }
-
     .date {
-      color: #0ff; /* neon blue */
+      color: #0ff;
       font-style: italic;
       margin-bottom: 1rem;
       transition: color 0.3s ease;
     }
-      
 
-     .date {
-    color: #0ff; /* neon blue */
-    font-style: italic;
-    margin-bottom: 1rem;
-    transition: color 0.3s ease;
-  }
+    body.light-mode .date {
+      color: #333;
+    }
 
-  /* Updated date color for light mode */
-  body.light-mode .date {
-    color: #333; /* dark gray for readability on light background */
-  }
     .section-box {
       background: #111;
       padding: 1.5rem;
@@ -84,9 +99,11 @@
       color: #eee;
       transition: background-color 0.3s ease, color 0.3s ease, border-left-color 0.3s ease;
     }
+
     .section-box h3 {
       margin-top: 0;
     }
+
     img.park {
       width: 100%;
       max-width: 600px;
@@ -94,22 +111,6 @@
       box-shadow: 0 0 12px #0ff8;
       margin-top: 1rem;
       transition: box-shadow 0.3s ease;
-    }
-    button {
-      background-color: #0ff;
-      color: #111;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 0;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      white-space: nowrap;
-    }
-    button:hover {
-      background-color: #00cccc;
-      color: #000;
     }
 
     /* Light mode styles */
@@ -124,9 +125,9 @@
     }
 
     body.light-mode header h1,
-    body.light-mode header nav a,
-    body.light-mode header button {
-    color: #000 !important;
+    body.light-mode .header-second-line button,
+    body.light-mode nav a {
+      color: #000 !important;
     }
 
     body.light-mode footer {
@@ -145,18 +146,20 @@
       box-shadow: 0 0 12px #d006;
     }
 
-    /* Nav link and button colors for light mode: readable, not neon */
     body.light-mode nav a {
-      color: #005577; /* darker blue, easy to read on light bg */
+      color: #005577;
     }
+
     body.light-mode nav a:hover {
       color: #003344;
     }
-    body.light-mode button {
+
+    body.light-mode .header-second-line button {
       background-color: #005577;
       color: #fff;
     }
-    body.light-mode button:hover {
+
+    body.light-mode .header-second-line button:hover {
       background-color: #003344;
       color: #fff;
     }
@@ -166,10 +169,12 @@
 
   <header>
     <h1>Day 4 – A Lil Better, Tech Glitches & Park Peace</h1>
-    <nav>
-      <a href="../index.html">← Back</a>
-    </nav>
-    <button id="toggleModeBtn" aria-label="Toggle Dark/Light Mode">Dark/Light Mode</button>
+    <div class="header-second-line">
+      <nav class="back-center">
+        <a href="../index.html">← Back</a>
+      </nav>
+      <button id="toggleModeBtn" aria-label="Toggle Dark/Light Mode">Dark/Light Mode</button>
+    </div>
   </header>
 
   <main class="container">
@@ -198,7 +203,7 @@
         <h3>🌳 Park Peace</h3>
         <p>I went to the NITJ park today. And ohhh, those little kids, laughing and running around? Their joy is so pure. I literally paused and smiled like a fool. It’s these tiny moments that remind me — life still has softness, even on tough days.</p>
         <img src="../images/nitj-park.jpg" alt="NITJ Park – Evening" class="park" />
-        <p style="font-style: italic; font-size: 0.9rem;">Captured: 23/05/2025, 6:59 PM. liitle children, big smiles. 😊</p>
+        <p style="font-style: italic; font-size: 0.9rem;">Captured: 23/05/2025, 6:59 PM. little children, big smiles. 😊</p>
       </section>
 
     </article>
@@ -214,13 +219,13 @@
     const body = document.body;
 
     // Load mode from localStorage if set
-    if(localStorage.getItem('mode') === 'light') {
+    if (localStorage.getItem('mode') === 'light') {
       body.classList.add('light-mode');
     }
 
     toggleBtn.addEventListener('click', () => {
       body.classList.toggle('light-mode');
-      if(body.classList.contains('light-mode')) {
+      if (body.classList.contains('light-mode')) {
         localStorage.setItem('mode', 'light');
       } else {
         localStorage.setItem('mode', 'dark');
