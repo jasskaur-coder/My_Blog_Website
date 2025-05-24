@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Day 5 – Lessons from the Unwanted | DailyU Blog</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../images/favicon.png" type="image/png" />
+
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      margin: 0;
+      padding: 1rem;
+    }
+
+    header {
+      background-color: #111;
+      color: #eee;
+      padding: 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      color: #0cc;
+      text-align: center;
+    }
+
+    .header-second-line {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-top: 1rem;
+    }
+
+    .back-center {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .header-second-line button {
+      position: absolute;
+      right: 0;
+      background-color: #0ff;
+      color: #111;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .header-second-line button:hover {
+      background-color: #00cccc;
+      color: #000;
+    }
+
+    nav a {
+      color: #0ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #0cc;
+    }
+
+    footer {
+      width: 100%;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    .date {
+      color: #0ff;
+      font-style: italic;
+      margin-bottom: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .section-box {
+      background: #111;
+      padding: 1.5rem;
+      border-left: 5px solid #f0c;
+      border-radius: 12px;
+      margin-top: 2rem;
+      color: #eee;
+      transition: background-color 0.3s ease, color 0.3s ease, border-left-color 0.3s ease;
+    }
+
+    .section-box h3 {
+      margin-top: 0;
+    }
+
+    img.park {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px #0ff8;
+      margin-top: 1rem;
+      transition: box-shadow 0.3s ease;
+    }
+
+    /* Light mode styles */
+    body.light-mode {
+      background-color: #f0f0f0;
+      color: #111;
+    }
+
+    body.light-mode header {
+      background-color: #fff;
+      color: #000 !important;
+    }
+    body.light-mode .date {
+      color: #333;
+    }
+
+    body.light-mode header h1,
+    body.light-mode .header-second-line button,
+    body.light-mode nav a {
+      color: #000 !important;
+    }
+
+    body.light-mode footer {
+      background-color: #f0f0f0;
+      color: #111;
+    }
+
+    body.light-mode .section-box {
+      background: #fff;
+      color: #222;
+      border-left-color: #f06;
+      box-shadow: 0 0 12px #f06a;
+    }
+
+    body.light-mode nav a {
+      color: #005577;
+    }
+
+    body.light-mode nav a:hover {
+      color: #003344;
+    }
+
+    body.light-mode .header-second-line button {
+      background-color: #005577;
+      color: #fff;
+    }
+
+    body.light-mode .header-second-line button:hover {
+      background-color: #003344;
+      color: #fff;
+    }
+
+    /* Game styles */
+    .game-section {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .emoji-button {
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem;
+      border-radius: 12px;
+      border: none;
+      background-color: #0ff2;
+      transition: transform 0.2s ease;
+    }
+
+    .emoji-button:hover {
+      transform: scale(1.2);
+      background-color: #0ff5;
+    }
+
+    .score {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Day 5 – Lessons from the Unwanted</h1>
+    <div class="header-second-line">
+      <nav class="back-center">
+        <a href="../index.html">← Back</a>
+      </nav>
+      <button id="toggleModeBtn" aria-label="Toggle Dark/Light Mode">Dark/Light Mode</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <article>
+      <p class="date">May 24, 2025</p>
+
+      <section>
+        <p>Sometimes, life throws you into experiences you never asked for—situations you wish never happened. And yet, they happen.</p>
+        <p>When I find myself caught in such moments again, I often go back to my past—not to dwell there, but to learn.</p>
+        <p>It’s not easy. Revisiting those memories means facing some of the worst parts of my life. But I believe the lessons are important… even when they hurt. Even when they leave a scar. Because growth doesn’t always come gently.</p>
+        <p>Right now, I just want to break free from this phase. I’m trying—truly trying—to become the best version of myself. Not just for me, but for those who love me. Especially for the one role that means the most to me: being the best daughter I can be.</p>
+      </section>
+
+      <section class="game-section">
+        <h3>🎯 Click-the-Emoji Game</h3>
+        <p>Tap the 💖 emoji as fast as you can. Miss it and the score resets!</p>
+        <button class="emoji-button" onclick="checkEmoji(this)">💖</button>
+        <button class="emoji-button" onclick="checkEmoji(this)">🍕</button>
+        <button class="emoji-button" onclick="checkEmoji(this)">🐱</button>
+        <button class="emoji-button" onclick="checkEmoji(this)">🧁</button>
+        <p class="score" id="scoreDisplay">Score: 0</p>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2025 DailyU Blog</p>
+  </footer>
+
+  <script>
+    // Dark/Light Mode Toggle
+    const toggleBtn = document.getElementById('toggleModeBtn');
+    const body = document.body;
+
+    if (localStorage.getItem('mode') === 'light') {
+      body.classList.add('light-mode');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+      if (body.classList.contains('light-mode')) {
+        localStorage.setItem('mode', 'light');
+      } else {
+        localStorage.setItem('mode', 'dark');
+      }
+    });
+
+    // Emoji Click Game Logic
+    let score = 0;
+
+    function checkEmoji(button) {
+      if (button.textContent === "💖") {
+        score++;
+        document.getElementById('scoreDisplay').textContent = `Score: ${score}`;
+        shuffleEmojis();
+      } else {
+        score = 0;
+        document.getElementById('scoreDisplay').textContent = `Score: ${score}`;
+      }
+    }
+
+    function shuffleEmojis() {
+      const emojis = ["💖", "🍕", "🐱", "🧁"];
+      const buttons = document.querySelectorAll(".emoji-button");
+      emojis.sort(() => Math.random() - 0.5);
+      buttons.forEach((btn, i) => {
+        btn.textContent = emojis[i];
+      });
+    }
+  </script>
+
+</body>
+</html>
