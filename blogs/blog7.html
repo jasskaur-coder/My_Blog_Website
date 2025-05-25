@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Day 6 – Story Time, Announcement Bar & A Girl Named Aarohi | DailyU Blog</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../images/favicon.png" type="image/png" />
+
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      margin: 0;
+      padding: 1rem;
+    }
+
+    header {
+      background-color: #111;
+      color: #eee;
+      padding: 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      color: #0ff;
+      text-align: center;
+    }
+
+    .header-second-line {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-top: 1rem;
+    }
+
+    .back-center {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .header-second-line button {
+      position: absolute;
+      right: 0;
+      background-color: #0ff;
+      color: #111;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .header-second-line button:hover {
+      background-color: #0ff;
+      color: #fff;
+    }
+
+    nav a {
+      color: #0ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #0ff;
+    }
+
+    footer {
+      width: 100%;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    .date {
+      color: #0ff;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .section-box {
+      background: #111;
+      padding: 1.5rem;
+      border-left: 5px solid #0ff;
+      border-radius: 12px;
+      margin-top: 2rem;
+      color: #eee;
+    }
+
+    .section-box h3 {
+      margin-top: 0;
+    }
+
+    /* Light mode styles */
+    body.light-mode {
+      background-color: #f0f0f0;
+      color: #111;
+    }
+
+    body.light-mode header {
+      background-color: #fff;
+      color: #000 !important;
+    }
+
+    body.light-mode header h1,
+    
+    body.light-mode .date {
+      color: #000 !important;
+    }
+    body.light-mode .header-second-line button,
+    body.light-mode nav a {
+      color: #000 !important;
+    }
+
+    body.light-mode footer {
+      background-color: #f0f0f0;
+      color: #111;
+    }
+
+    body.light-mode .section-box {
+      background: #fff;
+      color: #222;
+      border-left-color: #0cc;
+      box-shadow: 0 0 12px #0cc8;
+    }
+
+    body.light-mode nav a {
+      color: #005577;
+    }
+
+    body.light-mode nav a:hover {
+      color: #003344;
+    }
+
+    body.light-mode .header-second-line button {
+      background-color: #005577;
+      color: #fff;
+    }
+
+    body.light-mode .header-second-line button:hover {
+      background-color: #003344;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Day 6 – Story Time, Announcement Bar & A Girl Named Aarohi</h1>
+    <div class="header-second-line">
+      <nav class="back-center">
+        <a href="../index.html">← Back</a>
+      </nav>
+      <button id="toggleModeBtn" aria-label="Toggle Dark/Light Mode">Dark/Light Mode</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <article>
+      <p class="date">May 25, 2025</p>
+
+      <section>
+        <p>Today wasn’t about code or caffeine... today was <em>story time</em>.</p>
+        <p>And no, not just any story — <strong>my story</strong>. About a girl who chose silence for years. A girl named Aarohi.</p>
+      </section>
+
+      <section class="section-box">
+        <h3>🔔 Tech Update – The Announcement Bar</h3>
+        <p>Quick tech note! I added an <strong>announcement section</strong> to my blog website. 🎉</p>
+        <p>It felt good to build something that's always visible at the top — a small space to share daily wisdom, quotes, or just a tiny spark. It's now up on the home page!</p>
+        <p>Next? Thinking of animating it a bit... 👀</p>
+      </section>
+
+      <section class="section-box">
+        <h3>💬 Story Time – The Girl Who Chose Silence</h3>
+        <p>So... have you ever locked yourself inside your room? For two years?</p>
+        <p>No? Well, <strong>Aarohi</strong> did. Not because someone made her. But because <em>she</em> chose to.</p>
+        <p>She didn’t want the world. She didn’t want light, sound, or even people. She just wanted to disappear. To pause everything. It started with a dissapointment, spiraled into anxiety... and then turned into months of depression.</p>
+        <p>2–3 months of numbness. But then... one day, she woke up and decided this wasn’t going to be her story’s end.</p>
+        <p>She picked herself up. Slowly. Day by day. Painfully. But she did it.</p>
+        <p>And now? She’s out of that room. Out of that darkness. And out of that loop of self-blame and silence.</p>
+        <p>And you know who's proud of her?</p>
+        <p><strong>She is.</strong> 🥹</p>
+      </section>
+
+      <section class="section-box">
+        <h3>✨ A Note to Anyone Reading</h3>
+        <p>If you’ve ever felt lost... like no one’s watching, no one cares — please know that <em>you are seen</em>. Your journey matters.</p>
+        <p>If Aarohi could make it out, maybe you can too.</p>
+        <p>Today wasn’t fancy. No deep code, no running kids, no perfect screenshots.</p>
+        <p>But it was real. And sometimes, real is enough. 💖</p>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2025 DailyU Blog</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleModeBtn');
+    const body = document.body;
+
+    if (localStorage.getItem('mode') === 'light') {
+      body.classList.add('light-mode');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+      if (body.classList.contains('light-mode')) {
+        localStorage.setItem('mode', 'light');
+      } else {
+        localStorage.setItem('mode', 'dark');
+      }
+    });
+  </script>
+
+</body>
+</html>
