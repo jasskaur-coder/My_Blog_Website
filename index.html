@@ -5,18 +5,46 @@
   <title>My Blog</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="images/favicon.png" type="image/x-icon">
-
+  <style>
+    /* Inline CSS just for the announcement bar */
+    .announcement {
+      background-color: #222;
+      color: #ff69b4;
+      font-style: italic;
+      padding: 12px 20px;
+      margin: 15px auto;
+      max-width: 900px;
+      border-left: 5px solid #ff69b4;
+      font-size: 1.15rem;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .announcement blockquote {
+      margin: 0;
+      padding: 0;
+      border: none;
+      font-family: 'Georgia', serif;
+    }
+  </style>
 </head>
 <body>
- <header>
-  <h1>📝 My Blog</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <header>
+    <h1>📝 My Blog</h1>
+    <nav>
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
+  <div id="announcement" class="announcement" role="note" aria-live="polite">
+    📢
+    <blockquote id="announcement-text">
+      "💻 Code is not just lines; it's a reflection of your thoughts 💭 made real ✨."
+    </blockquote>
+  </div>
 
   <main class="container">
     
@@ -36,8 +64,8 @@
       <h2>🌟 Day 2 – Tired but Trying (May 21, 2025)</h2>
       <p class="date">May 21, 2025</p>
       <p>A tough day with exams and learning Python offset values — but still pushing through!</p>
-   </div>
-
+    </div>
+    
     <div class="blog-card" onclick="location.href='blogs/blog4.html'">
       <h2>☕ Day 3 – Caffeine & Code (May 22, 2025)</h2>
       <p class="date">May 22, 2025</p>
@@ -49,15 +77,12 @@
       <p class="date">May 23, 2025</p>
       <p>A softer day — coding through bugs, finding peace at the park, and reminding myself to pause when perfection pressures hit.</p>
     </div>
-     
+
     <div class="blog-card" onclick="location.href='blogs/blog6.html'">
-       <h2>💭 Day 5 – Lessons from the Unwanted & Inner Healing (May 24, 2025)</h2>
-       <p class="date">May 24, 2025</p>
-       <p>A deeply reflective day — revisiting painful memories not by choice, but for growth. Learning, healing, and trying to become the best version of myself.</p>
+      <h2>💭 Day 5 – Lessons from the Unwanted & Inner Healing (May 24, 2025)</h2>
+      <p class="date">May 24, 2025</p>
+      <p>A deeply reflective day — revisiting painful memories not by choice, but for growth. Learning, healing, and trying to become the best version of myself.</p>
     </div>
-
-
-
   </main>
 
   <footer>
