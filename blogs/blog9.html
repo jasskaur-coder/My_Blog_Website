@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 8 – Distracted Start, Grateful End</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    :root {
+      --bg-color: #000;
+      --text-color: #fff;
+      --border-color: hotpink;
+      --highlight: cyan;
+      --link-color: hotpink;
+    }
+
+    body.light {
+      --bg-color: #fff;
+      --text-color: #000;
+      --border-color: #007bff;
+      --highlight: #00bcd4;
+      --link-color: #d63384;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Segoe UI', sans-serif;
+      padding: 2rem;
+      transition: background-color 0.4s, color 0.4s;
+      line-height: 1.7;
+    }
+
+    .blog-section {
+      border-left: 4px solid var(--border-color);
+      padding-left: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      border-radius: 12px;
+      margin: 1.2rem auto;
+      box-shadow: 0 0 20px var(--highlight);
+    }
+
+    .blog-date {
+      color: #aaa;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-bottom: 2rem;
+      text-decoration: none;
+      color: var(--link-color);
+      font-weight: bold;
+    }
+
+    /* Toggle Button */
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: var(--border-color);
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      font-size: 0.9rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      z-index: 1000;
+    }
+
+    .toggle-btn:hover {
+      background-color: var(--highlight);
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      body {
+        padding: 1.2rem;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+      }
+
+      .toggle-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      img {
+        max-width: 100%;
+        box-shadow: 0 0 10px var(--highlight);
+      }
+
+      .blog-section {
+        padding-left: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="toggle-btn" onclick="toggleTheme()">Toggle Mode</button>
+
+  <a href="../index.html" class="back-button">← Back to Home</a>
+  <h1>✨ Day 8 – Distracted Start, Grateful End</h1>
+  <p class="blog-date">June 8, 2025</p>
+
+  <!-- 🎱 Game Mode: Activated -->
+  <div class="blog-section">
+    <h3>🎱 Game Mode: Activated</h3>
+    <p>Today started kinda low — drained, distracted, and honestly a bit aimless. Exams are over, but that post-exam haze hit harder than expected. Still, I reminded myself: life doesn’t pause just because the motivation dips. Keep. Moving. Forward.</p>
+    <p>And guess what? A lovely friend took the lead and made the day sparkle 🌟 — spontaneous day out with the gang. My obsession with games pulled me toward the pool table (or is it billiards? Still not sure 😅). Either way, I <i>loved</i> every second of it!</p>
+    <img src="../images/pool-table.jpg" alt="Pool table game">
+  </div>
+
+  <!-- 👯‍♀️ Friend Time: Soul Recharge -->
+  <div class="blog-section">
+    <h3>👯‍♀️ Friend Time: Soul Recharge</h3>
+    <p>We chilled at this cozy cafe — vibes were immaculate ✨ Lights, music, friends, food... it felt like a reward I didn’t even know I needed. These moments? They’re my little anchors. Especially after days that feel heavy.</p>
+    <img src="../images/friends-outing.jpg" alt="Group of friends">
+  </div>
+
+  <!-- 📚 Back to Brain Mode -->
+  <div class="blog-section">
+    <h3>📚 Back to Brain Mode</h3>
+    <p>I didn’t forget my tech side either. I revised some DSA topics today. Feels like revisiting old friends — confusing, but comforting? 😄 Honestly, consistency matters more than speed. And I'm trying to hold on to that lesson.</p>
+  </div>
+
+  <!-- 🔍 Blog Tweaks: Mini Win -->
+  <div class="blog-section">
+    <h3>🔍 Blog Tweaks: Mini Win</h3>
+    <p>I finally tried adding a search bar on my website — to let readers filter blogs by vibe (#life, #tech, #storytime, etc.). Guess what? It worked! 🥳 Will polish it more later, but for now... that little "YES!" moment hit just right.</p>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light');
+    }
+  </script>

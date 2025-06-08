@@ -27,6 +27,38 @@
       border: none;
       font-family: 'Georgia', serif;
     }
+
+
+   #filter-section {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+   #searchBar {
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    width: 80%;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background: #111;
+    color: white;
+   }
+
+ .tag-buttons button {
+    margin: 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #444;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .tag-buttons button:hover {
+    background-color: #888;
+  }
+
   </style>
 </head>
 <body>
@@ -46,57 +78,75 @@
     </blockquote>
   </div>
 
+  <div id="filter-section">
+  <input type="text" id="searchBar" placeholder="Search by title or tag..." />
+
+  <div class="tag-buttons">
+    <button onclick="filterBlogs('all')">All</button>
+    <button onclick="filterBlogs('life')">#life</button>
+    <button onclick="filterBlogs('coding')">#coding</button>
+    <button onclick="filterBlogs('storytime')">#storytime</button>
+    <button onclick="filterBlogs('tech')">#tech</button>
+  </div>
+</div>
+
+
   <main class="container">
     
-    <div class="blog-card" onclick="location.href='blogs/blog2.html'">
-      <h2>💡 Learning Web Development AKA Frontend</h2>
-      <p class="date">May 19, 2025</p>
-      <p>I’ve started learning frontend development. Here's what I learned...</p>
-    </div>
+  <div class="blog-card" data-tags="life,coding" onclick="location.href='blogs/blog1.html'"> 
+     <h2>🕯️ Day 1 – Coding Time</h2>
+     <p class="date">May 19, 2025</p>
+     <p>I’ve started reflecting on my daily life and learning frontend development. Here’s what Day 1 taught me...</p> 
+   </div>
 
-    <div class="blog-card" onclick="location.href='blogs/blog1.html'">
+    <div class="blog-card" data-tags = "all" onclick="location.href='blogs/blog1.html'">
       <h2>🌟 My First Blog Post (May 20, 2025)</h2>
       <p class="date">May 20, 2025</p>
       <p>This is a short preview of my first blog post...</p>
     </div>
 
-    <div class="blog-card" onclick="location.href='blogs/blog3.html'">
+    <div class="blog-card" data-tags = "life,tech,all" onclick="location.href='blogs/blog3.html'">
       <h2>🌟 Day 2 – Tired but Trying (May 21, 2025)</h2>
       <p class="date">May 21, 2025</p>
       <p>A tough day with exams and learning Python offset values — but still pushing through!</p>
     </div>
     
-    <div class="blog-card" onclick="location.href='blogs/blog4.html'">
+    <div class="blog-card" data-tags = "life" onclick="location.href='blogs/blog4.html'">
       <h2>☕ Day 3 – Caffeine & Code (May 22, 2025)</h2>
       <p class="date">May 22, 2025</p>
       <p>A coffee-fueled day of revision, Python prep, and pushing past the exhaustion — 8 cups deep and still standing!</p>
     </div>
 
-    <div class="blog-card" onclick="location.href='blogs/blog5.html'">
+    <div class="blog-card" data-tags = "tech,life" onclick="location.href='blogs/blog5.html'">
       <h2>🌳 Day 4 – A Lil Better, Tech Glitches & Park Peace (May 23, 2025)</h2>
       <p class="date">May 23, 2025</p>
       <p>A softer day — coding through bugs, finding peace at the park, and reminding myself to pause when perfection pressures hit.</p>
     </div>
 
-    <div class="blog-card" onclick="location.href='blogs/blog6.html'">
+    <div class="blog-card" data-tags = "life" onclick="location.href='blogs/blog6.html'">
       <h2>💭 Day 5 – Lessons from the Unwanted & Inner Healing (May 24, 2025)</h2>
       <p class="date">May 24, 2025</p>
       <p>A deeply reflective day — revisiting painful memories not by choice, but for growth. Learning, healing, and trying to become the best version of myself.</p>
     </div>
 
-    <div class="blog-card" onclick="location.href='blogs/blog7.html'">
+    <div class="blog-card" data-tags = "storytime" onclick="location.href='blogs/blog7.html'">
      <h2>🕯️ Day 6 – Story Time, Announcement Bar & A Girl Named Aarohi (May 25, 2025)</h2>
      <p class="date">May 25, 2025</p>
      <p>A special day — not about code, but courage. Sharing my personal story, building a small announcement feature, and embracing the silence that once defined me.</p>
    </div>
 
-   <div class="blog-card" onclick="location.href='blogs/blog8.html'">
+   <div class="blog-card" data-tags = "life" onclick="location.href='blogs/blog8.html'">
     <h2>🌊 Day 7 – Writing, Tech Drift & Flowing Like a River (June 6, 2025)</h2>
     <p class="date">June 6, 2025</p>
     <p>A raw and honest check-in — from feeling lost in exams to finding flow again through words. Not much code, but a lot of courage. And a reminder: keep going.</p>
   </div>
 
-   
+  <div class="blog-card" data-tags="life tech fun" onclick="location.href='blogs/blog9.html'">
+    <h2>🎱 Day 8 – Distracted Start, Pool Games & a Tiny Tech Win (June 9, 2025)</h2>
+    <p class="date">June 8, 2025</p>
+    <p>Started off drained, but a spontaneous outing + a pool game + a search bar success brought my spark back. A little fun, a little tech, a lot of heart.</p>
+  </div>
+
   </main>
    
 
