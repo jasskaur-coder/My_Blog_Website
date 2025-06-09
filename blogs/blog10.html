@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Day 9 – Story Time - The Odd Return | DailyU Blog</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../images/favicon.png" type="image/png" />
+
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      margin: 0;
+      padding: 1rem;
+    }
+
+    header {
+      background-color: #111;
+      color: #eee;
+      padding: 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      color: #0ff;
+      text-align: center;
+    }
+
+    .header-second-line {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-top: 1rem;
+    }
+
+    .back-center {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .header-second-line button {
+      position: absolute;
+      right: 0;
+      background-color: #0ff;
+      color: #111;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .header-second-line button:hover {
+      background-color: #0ff;
+      color: #fff;
+    }
+
+    nav a {
+      color: #0ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #0ff;
+    }
+
+    footer {
+      width: 100%;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    .date {
+      color: #0ff;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .section-box {
+      background: #111;
+      padding: 1.5rem;
+      border-left: 5px solid #0ff;
+      border-radius: 12px;
+      margin-top: 2rem;
+      color: #eee;
+    }
+
+    .section-box h3 {
+      margin-top: 0;
+    }
+
+    /* Light mode styles */
+    body.light-mode {
+      background-color: #f0f0f0;
+      color: #111;
+    }
+
+    body.light-mode header {
+      background-color: #fff;
+      color: #000 !important;
+    }
+
+    body.light-mode header h1,
+    body.light-mode .date {
+      color: #000 !important;
+    }
+
+    body.light-mode .header-second-line button,
+    body.light-mode nav a {
+      color: #000 !important;
+    }
+
+    body.light-mode footer {
+      background-color: #f0f0f0;
+      color: #111;
+    }
+
+    body.light-mode .section-box {
+      background: #fff;
+      color: #222;
+      border-left-color: #0cc;
+      box-shadow: 0 0 12px #0cc8;
+    }
+
+    body.light-mode nav a {
+      color: #005577;
+    }
+
+    body.light-mode nav a:hover {
+      color: #003344;
+    }
+
+    body.light-mode .header-second-line button {
+      background-color: #005577;
+      color: #fff;
+    }
+
+    body.light-mode .header-second-line button:hover {
+      background-color: #003344;
+      color: #fff;
+    }
+
+
+    /* Spider Web Overlay */
+    #spiderWebOverlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(17, 17, 17, 0.8);
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      transition: opacity 0.8s ease;
+      cursor: pointer;
+    }
+
+    #spiderWebOverlay img {
+      max-width: 80%;
+      height: auto;
+      opacity: 0.85;
+      pointer-events: none;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Spider Web Overlay -->
+  <div id="spiderWebOverlay" title="Click the web to start spooky sound!">
+    <img src="../images/horrorimg.png" alt="Spider Web" />
+  </div>
+
+  <header>
+    <h1>Day 9 – Story Time - The Odd Return...!!!</h1>
+    <div class="header-second-line">
+      <nav class="back-center">
+        <a href="../index.html">← Back</a>
+      </nav>
+      <button id="toggleModeBtn" aria-label="Toggle Dark/Light Mode">Dark/Light Mode</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <article>
+      <p class="date">June 9, 2025</p>
+
+      <section>
+        <p>Today wasn’t just about updates and ideas. It was about something more unusual. Something unsettling yet real — a story that stayed in my mind like an echo. 🕯️</p>
+      </section>
+
+      <section class="section-box">
+        <h3>🕯️ Story Time – Odd Return</h3>
+        <p>A group of friends went for a day out to a beach, where they were enjoying and saving memories. As they were returning, their car suddenly slowed down and eventually stopped. It was dark, and they had no idea how to return back.</p>
+        <p>Then they found a house nearby. They decided to go in and saw a grandma. At first, the grandma hesitated to let them stay, but after their request, she finally agreed to let them stay the night.</p>
+        <p>After eating the meal, grandma made space for them to rest. While they were resting, a girl in that group heard some voices. She woke up and went toward the direction of the sound. She opened a cupboard and found a box in it. In that box, she saw some toys, wedding bangles, and many more things.</p>
+        <p>She was staring at them when grandma suddenly appeared behind her and said, <em>"Don’t touch those things."</em></p>
+        <p>It was weird. When they asked about all this, grandma was speechless at first. She kept avoiding the questions, but finally, she told them…</p>
+        <blockquote>
+          “These were my daughter’s things. She loved her husband too much, but he was a cheater. And as my daughter knew about him, she…”
+        </blockquote>
+        <p><strong>He made her walk to death.</strong></p>
+        <p>After listening to all of it, she was shocked.</p>
+        <p>But how can things be so weird?<br>
+        Is it only that one thing that made him so mad…<br>
+        …that he made her walk to death?</p>
+      </section>
+
+      <section class="section-box">
+        <h3>🌫️ A Thought Before You Sleep</h3>
+        <p>Not every story has a moral. Some are just... heavy.</p>
+        <p>But if this gave you chills, or made you pause — then maybe it did its job.</p>
+        <p>Sometimes the past whispers through silence, cupboards, and unfinished goodbyes.</p>
+        <p>Stay curious. Stay aware. And keep writing your story forward. 🌙</p>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2025 DailyU Blog</p>
+  </footer>
+
+  <!-- Horror sound -->
+  <audio id="horrorSound" src="../audio/horror.mp3" preload="auto"></audio>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleModeBtn');
+    const body = document.body;
+    const horrorSound = document.getElementById('horrorSound');
+    const spiderWebOverlay = document.getElementById('spiderWebOverlay');
+
+    // Theme persistence
+    if (localStorage.getItem('mode') === 'light') {
+      body.classList.add('light-mode');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+      if (body.classList.contains('light-mode')) {
+        localStorage.setItem('mode', 'light');
+      } else {
+        localStorage.setItem('mode', 'dark');
+      }
+    });
+
+    let soundPlaying = false;
+
+    // Play/pause sound on click of spider web
+    spiderWebOverlay.addEventListener('click', () => {
+      if (!soundPlaying) {
+        horrorSound.play().catch(e => console.log("Audio play blocked:", e));
+        spiderWebOverlay.style.opacity = '0';
+        setTimeout(() => spiderWebOverlay.style.display = 'none', 800);
+        soundPlaying = true;
+      } else {
+        horrorSound.pause();
+        horrorSound.currentTime = 0;
+        soundPlaying = false;
+        // Show overlay again to allow restart
+        spiderWebOverlay.style.display = 'flex';
+        setTimeout(() => spiderWebOverlay.style.opacity = '1', 100);
+      }
+    });
+  </script>
+
+</body>
+</html>
