@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Day 13 - Sometimes I Want to Disappear | DailyU Blog</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../images/favicon.png" type="image/png" />
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      margin: 0;
+      padding: 1rem;
+    }
+
+    header {
+      background-color: #111;
+      color: #eee;
+      padding: 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      color: #0ff;
+      text-align: center;
+    }
+
+    .header-second-line {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-top: 1rem;
+    }
+
+    .back-center {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .header-second-line button {
+      position: absolute;
+      right: 0;
+      background-color: #0ff;
+      color: #111;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .header-second-line button:hover {
+      background-color: #0ff;
+      color: #fff;
+    }
+
+    nav a {
+      color: #0ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #0ff;
+    }
+
+    footer {
+      width: 100%;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    .date {
+      color: #0ff;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .section-box {
+      background: #111;
+      padding: 1.5rem;
+      border-left: 5px solid #0ff;
+      border-radius: 12px;
+      margin-top: 2rem;
+      color: #eee;
+    }
+
+    .section-box h3 {
+      margin-top: 0;
+    }
+
+    body.light-mode {
+      background-color: #f0f0f0;
+      color: #111;
+    }
+
+    body.light-mode header {
+      background-color: #fff;
+      color: #000 !important;
+    }
+
+    body.light-mode header h1,
+    body.light-mode .date {
+      color: #000 !important;
+    }
+
+    body.light-mode .header-second-line button,
+    body.light-mode nav a {
+      color: #000 !important;
+    }
+
+    body.light-mode footer {
+      background-color: #f0f0f0;
+      color: #111;
+    }
+
+    body.light-mode .section-box {
+      background: #fff;
+      color: #222;
+      border-left-color: #0cc;
+      box-shadow: 0 0 12px #0cc8;
+    }
+
+    body.light-mode nav a {
+      color: #005577;
+    }
+
+    body.light-mode nav a:hover {
+      color: #003344;
+    }
+
+    body.light-mode .header-second-line button {
+      background-color: #005577;
+      color: #fff;
+    }
+
+    body.light-mode .header-second-line button:hover {
+      background-color: #003344;
+      color: #fff;
+    }
+    #jokeGame input {
+        padding: 10px;
+        font-size: 1rem;
+        border-radius: 6px;
+        border: 1px solid #0ff;
+        width: 70%;
+        max-width: 300px;
+        margin-right: 10px;
+        background-color: #222;
+        color: #eee;
+    }
+
+    #jokeGame button {
+        padding: 10px 15px;
+        background-color: #0ff;
+        color: #111;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    #jokeGame button:hover {
+        background-color: #00cccc;
+    }
+
+    body.light-mode #jokeGame input {
+        background-color: #fff;
+        color: #111;
+        border-color: #0cc;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Day 13 - Sometimes I Want to Disappear</h1>
+    <div class="header-second-line">
+      <nav class="back-center">
+        <a href="../index.html">← Back</a>
+      </nav>
+      <button id="toggleModeBtn" aria-label="Toggle Dark/Light Mode">Dark/Light Mode</button>
+    </div>
+  </header>
+
+  <article>
+    <p class="date">June 17, 2025</p>
+
+    <section class="section-box">
+      <h3>💭 Sometimes I Want to Disappear, But Not Die</h3>
+      <p>Life is not simple. Isn’t that true?</p>
+      <p>Some say <em>"go with the flow,"</em> and some say <em>"do whatever you want to."</em> Exhausting, right?</p>
+      <p>Why don't people understand that an individual never wants to be controlled?</p>
+      <p>Sometimes, not just people, but life itself hits so hard that we feel helpless. And in those moments, the only thought I get is: <strong>“Let’s just disappear from this world for a while.”</strong></p>
+      <p>That’s it. Some people relate this feeling to death — but no, absolutely not.</p>
+      <p>Because the one who dies is not brave. The one who dies is the one who couldn’t face reality.</p>
+      <p>Yes, maybe reality is difficult to accept. But it <em>is</em> what it is.</p>
+      <p>Eventually, we all have to accept it — so why not start today?</p>
+      <p>Whenever you feel bad, just… disappear for a while. But promise yourself to come back — stronger, braver, and softer with yourself.</p>
+    </section>
+    <section class="section-box" id="jokeGame">
+      <h3>🎲 Enter Your Name, Get a Joke!</h3>
+      <input type="text" id="nameInput" placeholder="Enter your name..." />
+      <button onclick="tellJoke()">Tell me a joke</button>
+      <p id="jokeResult" style="margin-top: 1rem;"></p>
+    </section>
+
+  </article>
+
+  <footer>
+    <p>© 2025 DailyU Blog</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleModeBtn');
+    const body = document.body;
+
+    if (localStorage.getItem('mode') === 'light') {
+      body.classList.add('light-mode');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+      localStorage.setItem('mode', body.classList.contains('light-mode') ? 'light' : 'dark');
+    });
+    function tellJoke() {
+  const name = document.getElementById("nameInput").value.trim();
+  const output = document.getElementById("jokeResult");
+
+  if (!name) {
+    output.textContent = "Please enter your name first!";
+    return;
+  }
+
+    const jokes = [
+    `Hey ${name}, you must be a software update—because every time you show up, things get better!`,
+    `Why did ${name} cross the road? To avoid all responsibilities on the other side.`,
+    `${name}, if laughter is the best medicine, you're the entire pharmacy!`,
+    `Knock knock. Who’s there? ${name}. ${name} who? ${name} who forgot their own joke!`,
+    `Dear ${name}, you’re like WiFi. I feel lost without you.`,
+    `Hey ${name}, are you a magician? Because whenever you're around, everything else disappears.`,
+    `${name}, if you were a vegetable, you'd be a cute-cumber.`,
+    `I asked Google for a joke, and it showed your name, ${name}. Just kidding! Or am I?`,
+    `Why don't scientists trust atoms, ${name}? Because they make up everything — just like your excuses!`,
+    `${name}, even mirrors avoid reflecting how awesome you are. Too much sparkle!`,
+    `${name}, are you a Java program? Because you’ve got class!`,
+    `Hey ${name}, are you related to time? Because I lose track of it when I talk to you.`,
+    `${name}, you must be a bug in the code — always popping up at unexpected times!`,
+    `If brains were WiFi signals, you'd be 5G, ${name}.`,
+    `They say nobody's perfect… but clearly, they haven’t met ${name} yet.`,
+    `You know what's funnier than a good joke? ${name} trying to tell one! 😆`,
+    `Warning: ${name} detected. Too much cuteness to handle.`,
+    `${name}, if you were a fruit, you'd be a fine-apple 🍍.`,
+    `NASA called, ${name}. They want to study your star-level energy.`,
+    `Hey ${name}, you must be a software update—because every time you show up, things get better!`,
+    `${name}, are you made of copper and tellurium? Because you're Cu-Te!`,
+    `Why did ${name} bring a ladder to the class? Because they were going to high school!`,
+    `${name}, I asked the computer to tell me a joke and it replied: 'Only if it's about you!'`,
+    `You know, ${name}, even WiFi connects better when you're around.`,
+    `Why did ${name} sit near the window in class? To let their bright ideas shine out!`,
+    `Why was ${name} always calm? Because nothing could byte them.`,
+    ];
+
+
+  const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+  output.textContent = randomJoke;
+}
+
+  </script>
+</body>
+</html>
