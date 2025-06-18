@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 14 - Chaos & Code | DailyU Blog</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../images/favicon.png" type="image/png" />
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      margin: auto;
+      padding: 1rem;
+    }
+
+    header {
+      background-color: #111;
+      color: #eee;
+      padding: 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      color: #0ff;
+      text-align: center;
+    }
+
+    .header-second-line {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-top: 1rem;
+    }
+
+    .back-center {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .header-second-line button {
+      position: absolute;
+      right: 0;
+      background-color: #0ff;
+      color: #111;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .header-second-line button:hover {
+      background-color: #0cc;
+      color: #fff;
+    }
+
+    .date {
+      color: #0ff;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .section-box {
+      background: #111;
+      padding: 1.5rem;
+      border-left: 5px solid #0ff;
+      border-radius: 12px;
+      margin-top: 2rem;
+    }
+
+    .section-box h3 {
+      margin-top: 0;
+    }
+
+    footer {
+      width: 100%;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    #quizGame input {
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #0ff;
+      width: 80%;
+      margin-top: 10px;
+      background-color: #222;
+      color: #eee;
+    }
+
+    #quizGame button {
+      padding: 10px 15px;
+      margin-top: 10px;
+      background-color: #0ff;
+      color: #111;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    #quizGame button:hover {
+      background-color: #00cccc;
+    }
+
+    #quizResult {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .header-second-line {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header-second-line button {
+        position: static;
+        margin-top: 1rem;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Day 14 - Chaos & Code</h1>
+    <div class="header-second-line">
+      <nav class="back-center">
+        <a href="../index.html">← Back</a>
+      </nav>
+      <button id="toggleModeBtn">Dark/Light Mode</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <article>
+      <p class="date">June 18, 2025</p>
+
+      <section class="section-box">
+        <h3>🌀 A Chaotic Yet Productive Day</h3>
+        <p>The day was full of chaos... My messed-up sleep schedule made me feel lethargic. But still, I managed to cover some DSA topics today.</p>
+        <p>Life, sometimes, is so unfair that it's hard to accept. But other times, it surprises us with unexpected happiness.</p>
+        <p>In between all that, the only thing I can do is — keep flowing like a river. That’s the mindset for now.</p>
+      </section>
+
+      <section class="section-box" id="quizGame">
+        <h3>🧠 Test Your DSA Knowledge</h3>
+        <p>Ready to test what you've learned today? Try this one-question DSA quiz!</p>
+        <p><strong>Question:</strong> What is the time complexity of binary search on a sorted array?</p>
+        <input type="text" id="quizAnswer" placeholder="Enter your answer..." />
+        <button onclick="checkQuizAnswer()">Submit</button>
+        <p id="quizResult"></p>
+      </section>
+    </article>
+  </div>
+
+  <footer>
+    <p>© 2025 DailyU Blog</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleModeBtn');
+    const body = document.body;
+
+    if (localStorage.getItem('mode') === 'light') {
+      body.classList.add('light-mode');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+      localStorage.setItem('mode', body.classList.contains('light-mode') ? 'light' : 'dark');
+    });
+
+    function checkQuizAnswer() {
+      const answer = document.getElementById("quizAnswer").value.trim().toLowerCase();
+      const result = document.getElementById("quizResult");
+
+      if (!answer) {
+        result.textContent = "Please enter an answer!";
+        return;
+      }
+
+      if (answer === "o(log n)" || answer === "log n" || answer === "logn") {
+        result.textContent = "✅ Correct! Binary search has O(log n) time complexity.";
+      } else {
+        result.textContent = "❌ Oops! That's incorrect. The correct answer is O(log n).";
+      }
+    }
+  </script>
+</body>
+</html>
