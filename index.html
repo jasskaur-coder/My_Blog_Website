@@ -1,280 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Blog</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to DailyU</title>
   <style>
-    /* Inline CSS just for the announcement bar */
-    .announcement {
-      background-color: #222;
-      color: #ff69b4;
-      font-style: italic;
-      padding: 12px 20px;
-      margin: 15px auto;
-      max-width: 900px;
-      border-left: 5px solid #ff69b4;
-      font-size: 1.15rem;
-      user-select: none;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .announcement blockquote {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: #000;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 1200px;
+    }
+
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      top: 0;
+      left: 0;
+    }
+
+    .welcome-box {
+      text-align: center;
+      padding: 50px;
+      background: #0a0a0a;
+      border-radius: 20px;
+      box-shadow: 0 0 30px #0ff, inset 0 0 10px #0ff;
+      transform: scale(0.6) rotateX(90deg);
+      animation: boomIn 1.5s ease-out forwards, glowPulse 3s ease-in-out infinite;
+      transform-style: preserve-3d;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      color: #0ff;
+      text-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
+    }
+
+    .typewriter {
+      margin-top: 1.5rem;
+      font-size: 1.3rem;
+      white-space: pre-wrap;
+      border-right: 2px solid #0ff;
+      color: #ccc;
+      font-family: 'Courier New', monospace;
+      animation: blink 0.8s step-end infinite;
+      text-shadow: 0 0 8px #0ff;
+      max-width: 90vw;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #skip {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #0ff;
+      color: #111;
       border: none;
-      font-family: 'Georgia', serif;
-    }
-
-
-   #filter-section {
-      margin: 20px 0;
-      text-align: center;
-    }
-
-   #searchBar {
-    padding: 8px 12px;
-    margin-bottom: 10px;
-    width: 80%;
-    border-radius: 8px;
-    border: 1px solid #444;
-    background: #111;
-    color: white;
-   }
-
- .tag-buttons button {
-    margin: 5px;
-    padding: 5px 10px;
-    border: none;
-    background-color: #444;
-    color: white;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-
-  .tag-buttons button:hover {
-    background-color: #888;
-  }
-
-  .blog-card {
-    background-color: #1a1a1a;
-    color: #eee;
-    padding: 1.5rem;
-    border-radius: 16px;
-    margin: 1rem 0;
-    box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-  }
-
-  .blog-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 24px rgba(0, 255, 255, 0.4);
-  }
-
-  .blog-card h2 {
-    font-size: 1.4rem;
-    color: #0ff;
-    margin-bottom: 0.5rem;
-  }
-
-  .blog-card .date {
-    color: #aaa;
-    font-style: italic;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-  }
-
-  .blog-card p {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-  .new-post-banner {
-      display: block;
-      background: rgb(27, 28, 28);
-      color: #f8f0f0;
-      text-align: center;
-      padding: 10px;
+      padding: 10px 16px;
       font-weight: bold;
-      text-decoration: none;
-      animation: glowPulse 3s ease-in-out infinite, zoomBounce 1s ease-out;
+      border-radius: 8px;
+      box-shadow: 0 0 12px #0ff;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    @keyframes boomIn {
+      0% {
+        transform: scale(0.4) rotateX(90deg);
+        opacity: 0;
+      }
+      50% {
+        transform: scale(1.1) rotateX(-10deg);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1) rotateX(0);
+      }
     }
 
     @keyframes glowPulse {
-    0%, 100% { box-shadow: 0 0 10px #ff69b4, 0 0 30px #ff69b4; }
-    50% { box-shadow: 0 0 25px #ff69b4, 0 0 50px #ff1493; }
-  }
-    .blog-card.featured {
-      border-color: #ff69b4;
-      box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
-      background-color: #1a1a1a;
+      0%, 100% {
+        box-shadow: 0 0 20px #0ff, inset 0 0 5px #0ff;
+      }
+      50% {
+        box-shadow: 0 0 40px #0ff, inset 0 0 15px #0ff;
+      }
     }
-
   </style>
 </head>
 <body>
-  <header>
-    <h1>📝 My Blog</h1>
-    <nav>
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <div id="particles-js"></div>
 
-  <a href="blogs/blog17.html" class="new-post-banner">🔜 Read Today’s Blog: Day 16 –  🌀 Lessons Beyond Code</a>
-
-  <div id="announcement" class="announcement" role="note" aria-live="polite">
-    📢
-    <blockquote id="announcement-text">
-      🧠💻 Debugging life & code — one bug, one breath, one breakthrough at a time. ✨🛠️
-    </blockquote>
+  <div class="welcome-box">
+    <h1>✨ Welcome to DailyU ✨</h1>
+    <div id="typewriter" class="typewriter"></div>
   </div>
 
-  <div id="filter-section">
-  <input type="text" id="searchBar" placeholder="Search by title or tag..." />
+  <button id="skip" onclick="location.href='home.html'">Skip Intro ⏭️</button>
 
-  <div class="tag-buttons">
-    <button onclick="filterBlogs('all')">All</button>
-    <button onclick="filterBlogs('life')">#life</button>
-    <button onclick="filterBlogs('coding')">#coding</button>
-    <button onclick="filterBlogs('storytime')">#storytime</button>
-    <button onclick="filterBlogs('tech')">#tech</button>
-    <button onclick="filterBlogs('games')">#games</button>
-  </div>
-</div>
-
-
-  <main class="container">
-    
-  <div class="blog-card" data-tags="life,coding" onclick="location.href='blogs/blog1.html'"> 
-     <h2>🕯️ Day 1 – Coding Time</h2>
-     <p class="date">May 19, 2025</p>
-     <p>I’ve started reflecting on my daily life and learning frontend development. Here’s what Day 1 taught me...</p> 
-   </div>
-
-    <div class="blog-card" data-tags = "all" onclick="location.href='blogs/blog1.html'">
-      <h2>🌟 My First Blog Post (May 20, 2025)</h2>
-      <p class="date">May 20, 2025</p>
-      <p>This is a short preview of my first blog post...</p>
-    </div>
-
-    <div class="blog-card" data-tags = "life,tech,all" onclick="location.href='blogs/blog3.html'">
-      <h2>🌟 Day 2 – Tired but Trying (May 21, 2025)</h2>
-      <p class="date">May 21, 2025</p>
-      <p>A tough day with exams and learning Python offset values — but still pushing through!</p>
-    </div>
-    
-    <div class="blog-card" data-tags = "life" onclick="location.href='blogs/blog4.html'">
-      <h2>☕ Day 3 – Caffeine & Code (May 22, 2025)</h2>
-      <p class="date">May 22, 2025</p>
-      <p>A coffee-fueled day of revision, Python prep, and pushing past the exhaustion — 8 cups deep and still standing!</p>
-    </div>
-
-    <div class="blog-card" data-tags = "tech,life" onclick="location.href='blogs/blog5.html'">
-      <h2>🌳 Day 4 – A Lil Better, Tech Glitches & Park Peace (May 23, 2025)</h2>
-      <p class="date">May 23, 2025</p>
-      <p>A softer day — coding through bugs, finding peace at the park, and reminding myself to pause when perfection pressures hit.</p>
-    </div>
-
-    <div class="blog-card" data-tags = "life" onclick="location.href='blogs/blog6.html'">
-      <h2>💭 Day 5 – Lessons from the Unwanted & Inner Healing (May 24, 2025)</h2>
-      <p class="date">May 24, 2025</p>
-      <p>A deeply reflective day — revisiting painful memories not by choice, but for growth. Learning, healing, and trying to become the best version of myself.</p>
-    </div>
-
-    <div class="blog-card" data-tags = "storytime" onclick="location.href='blogs/blog7.html'">
-     <h2>🕯️ Day 6 – Story Time, Announcement Bar & A Girl Named Aarohi (May 25, 2025)</h2>
-     <p class="date">May 25, 2025</p>
-     <p>A special day — not about code, but courage. Sharing my personal story, building a small announcement feature, and embracing the silence that once defined me.</p>
-   </div>
-
-   <div class="blog-card" data-tags = "life" onclick="location.href='blogs/blog8.html'">
-    <h2>🌊 Day 7 – Writing, Tech Drift & Flowing Like a River (June 6, 2025)</h2>
-    <p class="date">June 6, 2025</p>
-    <p>A raw and honest check-in — from feeling lost in exams to finding flow again through words. Not much code, but a lot of courage. And a reminder: keep going.</p>
-  </div>
-
-  <div class="blog-card" data-tags="life,tech" onclick="location.href='blogs/blog9.html'">
-    <h2>🎱 Day 8 – Distracted Start, Pool Games & a Tiny Tech Win (June 9, 2025)</h2>
-    <p class="date">June 8, 2025</p>
-    <p>Started off drained, but a spontaneous outing + a pool game + a search bar success brought my spark back. A little fun, a little tech, a lot of heart.</p>
-  </div>
-  <div class="blog-card" data-tags="storytime" onclick="location.href='blogs/blog10.html'">
-    <h2>🕯️ Day 9 – The Odd Return, A Whisper from the Past (June 9, 2025)</h2>
-    <p class="date">June 9, 2025</p>
-    <p>A strange night, a grandma’s silence, and a story that left me shivering. Not every tale ends with peace — some end in questions. And echoes.</p>
-  </div>
-    <div class="blog-card" data-tags="life" onclick="location.href='blogs/blog11.html'">
-    <h2>🌿 Day 10 – Reflection – On Loneliness (June 12, 2025)</h2>
-    <p class="date">June 12, 2025</p>
-    <p>A gentle dive into the truth about loneliness — not as absence, but as a moment of self-completeness. A quiet reminder that being with yourself is a beautiful state of wholeness.</p>
-  </div>
-    <div class="blog-card" data-tags="tech,games" onclick="location.href='blogs/blog12.html'">
-    <h2>🎮 Day 11 – Reflection – On GTA V (June 13, 2025)</h2>
-    <p class="date">June 13, 2025</p>
-    <p>A thoughtful dive into the world behind GTA V — not just how it plays, but how it's made. From game engines to languages, here's the magic that powers a digital universe.</p>
-  </div>
-  <div class="blog-card" data-tags="life,college" onclick="location.href='blogs/blog13.html'">
-    <h2>🎓 Day 12 – Reflection – Last Day of First Year (June 15, 2025)</h2>
-    <p class="date">June 15, 2025</p>
-    <p>A nostalgic end to the first year at NIT Jalandhar — from birthday beginnings to hostel life, lessons learned, and the little moments that made it special.</p>
-  </div>
-  <div class="blog-card" data-tags="life,mental-health" onclick="location.href='blogs/blog14.html'">
-    <h2>🌫️ Day 13 – Sometimes I Want to Disappear (June 17, 2025)</h2>
-    <p class="date">June 17, 2025</p>
-    <p>
-      A raw and honest take on those overwhelming moments when life gets too much. It’s not about giving up — it’s about stepping back, recharging, and coming back stronger.
-    </p>
-  </div>
-  <div class="blog-card" data-tags="life,coding" onclick="location.href='blogs/blog15.html'">
-    <h2>🌀 Day 14 – A Chaotic Day, But I’m Still Flowing (June 18, 2025)</h2>
-    <p class="date">June 18, 2025</p>
-    <p>
-      Despite feeling lethargic and overwhelmed, I managed to push through. Life may be unfair sometimes, but flowing like a river — that's my mantra. Here's a glimpse into today’s tangled thoughts and tiny wins.
-    </p>
-  </div>
-    <div class="blog-card" data-tags="life,coding" onclick="location.href='blogs/blog16.html'">
-    <h2>🤒 Day 15 – Sick Days & Silent Battles (June 20, 2025)</h2>
-    <p class="date">June 20, 2025</p>
-    <p>
-      Being sick slowed me down, but didn’t stop me. Even on tough days, I remind myself — “Pain is a myth.” A little DSA revision, and I’m still on the path.
-    </p>
-  </div>
-  <div class="blog-card" data-tags="life,coding" onclick="location.href='blogs/blog17.html'">
-    <h2>🌀 Day 16 – Lessons Beyond Code (June 23, 2025)</h2>
-    <p class="date">June 23, 2025</p>
-    <p>
-      A crazy yet powerful day — from DSA struggles to 3D upgrades, mindset shifts, and blog cards that dance. Let’s go further, faster, fiercer. 💫
-    </p>
-  </div>
-
-
-
-
-
-  </main>
-   
-
-  <footer>
-    <p>© 2025 My Blog</p>
-  </footer>
-
-  <button id="scrollToTopBtn" title="Go to top">↑</button>
-  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+  <!-- Particles JS Library -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
-    VanillaTilt.init(document.querySelectorAll(".blog-card"), {
-      max: 15,
-      speed: 400,
-      glare: true,
-      "max-glare": 0.2,
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 60 },
+        color: { value: "#0ff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3 },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#0ff",
+          opacity: 0.4,
+          width: 1
+        },
+        move: { enable: true, speed: 2 }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: { onhover: { enable: true, mode: "repulse" } },
+        modes: { repulse: { distance: 100 } }
+      }
     });
   </script>
 
-  <script src="js/script.js"></script>
+  <!-- Typewriter Effect -->
+  <script>
+    const lines = [
+      "Your personal space to reflect, grow, and glow ✨",
+      "Let’s begin the journey... 🚀"
+    ];
+
+    let i = 0, line = 0;
+    const speed = 45;
+    const element = document.getElementById("typewriter");
+
+    function typeWriter() {
+      if (line < lines.length) {
+        if (i < lines[line].length) {
+          element.textContent += lines[line].charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        } else {
+          element.textContent += "\n";
+          line++;
+          i = 0;
+          setTimeout(typeWriter, 700);
+        }
+      }
+    }
+
+    window.onload = () => {
+      typeWriter();
+      setTimeout(() => {
+        window.location.href = "home.html";
+      }, 6000);
+    };
+  </script>
 </body>
 </html>
