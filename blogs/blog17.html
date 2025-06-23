@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 16 – Lessons Beyond Code | DailyU Blog</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../images/favicon.png" type="image/png" />
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      margin: auto;
+      padding: 1rem;
+    }
+
+    header {
+      background-color: #111;
+      color: #eee;
+      padding: 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      color: #0ff;
+      text-align: center;
+    }
+
+    .header-second-line {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-top: 1rem;
+    }
+
+    .back-center {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .header-second-line button {
+      position: absolute;
+      right: 0;
+      background-color: #0ff;
+      color: #111;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .header-second-line button:hover {
+      background-color: #0cc;
+      color: #fff;
+    }
+
+    .date {
+      color: #0ff;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .section-box {
+      background: #111;
+      padding: 1.5rem;
+      border-left: 5px solid #0ff;
+      border-radius: 12px;
+      margin-top: 2rem;
+    }
+
+    .section-box h3 {
+      margin-top: 0;
+    }
+
+    footer {
+      width: 100%;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      .header-second-line {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header-second-line button {
+        position: static;
+        margin-top: 1rem;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Day 16 – Lessons Beyond Code</h1>
+    <div class="header-second-line">
+      <nav class="back-center">
+        <a href="../index.html">← Back</a>
+      </nav>
+      <button id="toggleModeBtn">Dark/Light Mode</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <article>
+      <p class="date">June 23, 2025</p>
+
+      <section class="section-box">
+        <h3>🌀 Lessons Beyond Code, Dreams Beyond Limits</h3>
+        <p>Today was a bit crazy — in the best way possible.</p>
+        <p>Not just because I learned tech stuff or studied hard, but because I felt something shift inside me. I’m not sure what to call it — a realization? A push? A spark? All I know is… I want to go <strong>way ahead</strong> in life. 🚀</p>
+      </section>
+
+      <section class="section-box">
+        <h3>💻 On the Tech Side</h3>
+        <p>I’ve been grinding through DSA — with full focus and real effort. One of the trickiest problems I got stuck on today was the classic <strong>prime number</strong> question. Ugh, it annoyed me so much that I don’t even want to start it again (for now 😅). But I know I’ll come back stronger. That’s how growth works.</p>
+      </section>
+
+      <section class="section-box">
+        <h3>🖥️ Website Glow-Up!</h3>
+        <p>Guess what? I <strong>upgraded my website</strong> with full <strong>3D effects</strong>! 💻✨</p>
+        <p>Now when you hover over the blog cards — they literally dance! 💃🕺<br> No, seriously. Go try it. Hover your mouse… Told you 😂</p>
+      </section>
+
+      <section class="section-box">
+        <h3>🌱 Final Thought</h3>
+        <p>Some lessons aren’t about code or syntax — they’re about your mindset, your hustle, your fire to <strong>keep going</strong>. And today, I felt that fire. 🔥</p>
+        <p>Let’s build, let’s dream, let’s glow. 💫</p>
+      </section>
+    </article>
+  </div>
+
+  <footer>
+    <p>© 2025 DailyU Blog</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleModeBtn');
+    const body = document.body;
+
+    if (localStorage.getItem('mode') === 'light') {
+      body.classList.add('light-mode');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+      localStorage.setItem('mode', body.classList.contains('light-mode') ? 'light' : 'dark');
+    });
+  </script>
+</body>
+</html>

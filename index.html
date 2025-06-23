@@ -93,6 +93,26 @@
     font-size: 1rem;
     line-height: 1.5;
   }
+  .new-post-banner {
+      display: block;
+      background: rgb(27, 28, 28);
+      color: #f8f0f0;
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      animation: glowPulse 3s ease-in-out infinite, zoomBounce 1s ease-out;
+    }
+
+    @keyframes glowPulse {
+    0%, 100% { box-shadow: 0 0 10px #ff69b4, 0 0 30px #ff69b4; }
+    50% { box-shadow: 0 0 25px #ff69b4, 0 0 50px #ff1493; }
+  }
+    .blog-card.featured {
+      border-color: #ff69b4;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+      background-color: #1a1a1a;
+    }
 
   </style>
 </head>
@@ -105,6 +125,8 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+
+  <a href="blogs/blog17.html" class="new-post-banner">🔜 Read Today’s Blog: Day 16 –  🌀 Lessons Beyond Code</a>
 
   <div id="announcement" class="announcement" role="note" aria-live="polite">
     📢
@@ -223,6 +245,14 @@
       Being sick slowed me down, but didn’t stop me. Even on tough days, I remind myself — “Pain is a myth.” A little DSA revision, and I’m still on the path.
     </p>
   </div>
+  <div class="blog-card" data-tags="life,coding" onclick="location.href='blogs/blog17.html'">
+    <h2>🌀 Day 16 – Lessons Beyond Code (June 23, 2025)</h2>
+    <p class="date">June 23, 2025</p>
+    <p>
+      A crazy yet powerful day — from DSA struggles to 3D upgrades, mindset shifts, and blog cards that dance. Let’s go further, faster, fiercer. 💫
+    </p>
+  </div>
+
 
 
 
@@ -235,6 +265,16 @@
   </footer>
 
   <button id="scrollToTopBtn" title="Go to top">↑</button>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".blog-card"), {
+      max: 15,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.2,
+    });
+  </script>
+
   <script src="js/script.js"></script>
 </body>
 </html>

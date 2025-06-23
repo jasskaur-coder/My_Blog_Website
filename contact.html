@@ -55,5 +55,15 @@
   <footer>
     <p>© 2025 My Blog</p>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".blog-card"), {
+      max: 15,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.2,
+    });
+  </script>
+
 </body>
 </html>
