@@ -92,6 +92,7 @@ nav a[aria-current="page"] {
 }
 .blog-card:hover {
   transform: rotateY(5deg) rotateX(5deg) scale(1.03);
+  transform: perspective(0);
   box-shadow: 0 20px 40px rgba(0, 255, 255, 0.4);
 }
 .blog-card h2 {
