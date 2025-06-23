@@ -93,34 +93,42 @@
     font-size: 1rem;
     line-height: 1.5;
   }
-      .new-post-banner {
-      display: block;
-      background: rgb(27, 28, 28);
-      color: #f8f0f0;
-      text-align: center;
-      padding: 10px 20px;
-      font-weight: 600;
-      text-decoration: none;
-      animation: glowPulse 3s ease-in-out infinite, zoomBounce 1s ease-out;
-      margin: 10px auto;
-      width: 95%;
-      max-width: 800px;
-      font-size: 1rem;
-      border-radius: 8px;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-      box-sizing: border-box;
-    }
+  .new-post-banner {
+  display: block;
+  background: rgb(27, 28, 28);
+  color: #f8f0f0;
+  text-align: center;
+  padding: 8px 16px;
+  font-weight: 600;
+  text-decoration: none;
+  animation: glowPulse 3s ease-in-out infinite, fadeSlide 0.8s ease-out;
+  margin: 10px auto;
+  width: 95%;
+  max-width: 800px;
+  font-size: 1rem;
+  border-radius: 6px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px #ff69b4;
+  border: 1px solid #ff69b4;
+}
 
-    @media (max-width: 600px) {
-      .new-post-banner {
-        font-size: 0.85rem;
-        padding: 8px 12px;
-        line-height: 1.4;
-        border-left: 3px solid #ff69b4;
-        border-right: 3px solid #ff69b4;
-        animation: glowPulseMobile 2.5s ease-in-out infinite;
-      }
+@media (max-width: 600px) {
+  .new-post-banner {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    line-height: 1.4;
+    border-left: 3px solid #ff69b4;
+    border-right: 3px solid #ff69b4;
+    animation: glowPulseMobile 2.5s ease-in-out infinite, fadeSlide 0.8s ease-out;
+    margin-top: 12px;
+  }
+}
+
+    @keyframes glowPulse {
+      0%, 100% { box-shadow: 0 0 10px #ff69b4, 0 0 25px #ff69b4; }
+      50% { box-shadow: 0 0 20px #ff69b4, 0 0 40px #ff1493; }
     }
 
     @keyframes glowPulseMobile {
@@ -128,12 +136,18 @@
       50% { box-shadow: 0 0 10px #ff69b4, 0 0 25px #ff1493; }
     }
 
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(-15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
 
-    @keyframes glowPulse {
-    0%, 100% { box-shadow: 0 0 10px #ff69b4, 0 0 30px #ff69b4; }
-    50% { box-shadow: 0 0 25px #ff69b4, 0 0 50px #ff1493; }
-  }
+
+
+        @keyframes glowPulse {
+        0%, 100% { box-shadow: 0 0 10px #ff69b4, 0 0 30px #ff69b4; }
+        50% { box-shadow: 0 0 25px #ff69b4, 0 0 50px #ff1493; }
+      }
     .blog-card.featured {
       border-color: #ff69b4;
       box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
@@ -152,7 +166,10 @@
     </nav>
   </header>
 
-  <a href="blogs/blog17.html" class="new-post-banner">🔜  Read Today’s Blog: Day 16 –  🌀 Lessons Beyond Code</a>
+  <a href="blogs/blog16.html" class="new-post-banner">
+    📌 New Blog Just Dropped – Day 16: Lessons Beyond Code → Tap to Read
+  </a>
+
 
   <div id="announcement" class="announcement" role="note" aria-live="polite">
     📢
