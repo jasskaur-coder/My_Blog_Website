@@ -94,15 +94,30 @@
     line-height: 1.5;
   }
   .new-post-banner {
-      display: block;
-      background: rgb(27, 28, 28);
-      color: #f8f0f0;
-      text-align: center;
-      padding: 10px;
-      font-weight: bold;
-      text-decoration: none;
-      animation: glowPulse 3s ease-in-out infinite, zoomBounce 1s ease-out;
+    display: block;
+    background: rgb(27, 28, 28);
+    color: #f8f0f0;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    animation: glowPulse 3s ease-in-out infinite, zoomBounce 1s ease-out;
+    margin: 0 auto;
+    max-width: 100%;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+    @media (max-width: 600px) {
+      .new-post-banner {
+        font-size: 0.95rem;
+        padding: 8px;
+        line-height: 1.4;
+      }
     }
+
 
     @keyframes glowPulse {
     0%, 100% { box-shadow: 0 0 10px #ff69b4, 0 0 30px #ff69b4; }
