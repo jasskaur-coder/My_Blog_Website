@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 17 – “Stuck, Dizzy, and Still Coding” | DailyU Blog</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../images/favicon.png" type="image/png" />
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      margin: auto;
+      padding: 1rem;
+    }
+
+    header {
+      background-color: #111;
+      color: #eee;
+      padding: 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      color: #0ff;
+      text-align: center;
+    }
+
+    .header-second-line {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-top: 1rem;
+    }
+
+    .back-center {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .header-second-line button {
+      position: absolute;
+      right: 0;
+      background-color: #0ff;
+      color: #111;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .header-second-line button:hover {
+      background-color: #0cc;
+      color: #fff;
+    }
+
+    .date {
+      color: #0ff;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .section-box {
+      background: #111;
+      padding: 1.5rem;
+      border-left: 5px solid #0ff;
+      border-radius: 12px;
+      margin-top: 2rem;
+    }
+
+    .section-box h3 {
+      margin-top: 0;
+    }
+
+    footer {
+      width: 100%;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    body.light-mode {
+      background-color: #f0f0f0;
+      color: #111;
+    }
+
+    body.light-mode header {
+      background-color: #fff;
+      color: #000 !important;
+    }
+
+    body.light-mode header h1,
+    body.light-mode .date {
+      color: #000 !important;
+    }
+
+    body.light-mode .header-second-line button,
+    body.light-mode nav a {
+      color: #000 !important;
+    }
+
+    body.light-mode footer {
+      background-color: #f0f0f0;
+      color: #111;
+    }
+
+    body.light-mode .section-box {
+      background: #fff;
+      color: #222;
+      border-left-color: #0cc;
+      box-shadow: 0 0 12px #0cc8;
+    }
+
+    body.light-mode nav a:hover {
+      color: #003344;
+    }
+
+    body.light-mode .header-second-line button {
+      background-color: #005577;
+      color: #fff;
+    }
+
+    body.light-mode .header-second-line button:hover {
+      background-color: #003344;
+    }
+
+    body.light-mode #jokeGame input {
+      background-color: #fff;
+      color: #111;
+      border-color: #0cc;
+    }
+
+    @media (max-width: 600px) {
+      .header-second-line {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header-second-line button {
+        position: static;
+        margin-top: 1rem;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Day 17 – “Stuck, Dizzy, and Still Coding”</h1>
+    <div class="header-second-line">
+      <nav class="back-center">
+        <a href="../home.html">← Back</a>
+      </nav>
+      <button id="toggleModeBtn">Dark/Light Mode</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <article>
+      <p class="date">June 25, 2025</p>
+
+    <section class="section-box">
+        <h3>💭 Real Talk: When Learning Feels Heavy</h3>
+        <p>Learning might be fun — until and unless you feel dizzy...</p>
+        <p>Being someone who’s learning both DSA and web development, there are times when it just feels like *too much*. I get stuck on a problem, or the website doesn’t work the way I want it to — and honestly, it makes me want to give up.</p>
+        <p>But I keep reminding myself: maybe not today, but one day I need to do it. That thought alone is enough to pull me back. So, I go again. I start, fail, and restart.</p>
+        <p>And then — boom! When I finally solve it, the *relief* is beyond words. It’s that feeling that keeps me going. So yeah, I just need to keep learning, keep building, and most importantly — keep <strong>revising</strong>.</p>
+        <p>If you’ve ever felt this way too, let me know how you deal with it — drop me a message through the contact form, or comment on Twitter. Let’s grow together. 💪🌱</p>
+    </section>
+
+    </article>
+  </div>
+
+  <footer>
+    <p>© 2025 DailyU Blog</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleModeBtn');
+    const body = document.body;
+
+    if (localStorage.getItem('mode') === 'light') {
+      body.classList.add('light-mode');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+      localStorage.setItem('mode', body.classList.contains('light-mode') ? 'light' : 'dark');
+    });
+  </script>
+</body>
+</html>
