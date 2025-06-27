@@ -2,16 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Day 12 – Last Day of First Year | DailyU Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 18 – “DSA, Discipline & Development” | DailyU Blog</title>
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="icon" href="../images/favicon.png" type="image/png" />
-   <style>
+  <style>
     body {
       background-color: #111;
       color: #eee;
       font-family: Arial, sans-serif;
       transition: background-color 0.3s ease, color 0.3s ease;
       margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      margin: auto;
       padding: 1rem;
     }
 
@@ -55,27 +61,8 @@
     }
 
     .header-second-line button:hover {
-      background-color: #0ff;
+      background-color: #0cc;
       color: #fff;
-    }
-
-    nav a {
-      color: #0ff;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-      color: #0ff;
-    }
-
-    footer {
-      width: 100%;
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #888;
     }
 
     .date {
@@ -90,13 +77,19 @@
       border-left: 5px solid #0ff;
       border-radius: 12px;
       margin-top: 2rem;
-      color: #eee;
     }
 
     .section-box h3 {
       margin-top: 0;
     }
 
+    footer {
+      width: 100%;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
     body.light-mode {
       background-color: #f0f0f0;
       color: #111;
@@ -129,10 +122,6 @@
       box-shadow: 0 0 12px #0cc8;
     }
 
-    body.light-mode nav a {
-      color: #005577;
-    }
-
     body.light-mode nav a:hover {
       color: #003344;
     }
@@ -144,38 +133,54 @@
 
     body.light-mode .header-second-line button:hover {
       background-color: #003344;
-      color: #fff;
+    }
+
+    body.light-mode #jokeGame input {
+      background-color: #fff;
+      color: #111;
+      border-color: #0cc;
+    }
+
+    @media (max-width: 600px) {
+      .header-second-line {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header-second-line button {
+        position: static;
+        margin-top: 1rem;
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Day 12 – Reflection – Last Day of First Year</h1>
+    <h1>Day 18 – “DSA, Discipline & Development”</h1>
     <div class="header-second-line">
       <nav class="back-center">
         <a href="../home.html">← Back</a>
       </nav>
-      <button id="toggleModeBtn" aria-label="Toggle Dark/Light Mode">Dark/Light Mode</button>
+      <button id="toggleModeBtn">Dark/Light Mode</button>
     </div>
   </header>
 
-  <article>
-    <p class="date">June 15, 2025</p>
+  <div class="container">
+    <article>
+      <p class="date">June 27, 2025</p>
 
     <section class="section-box">
-      <p><strong>Last day of 1st year in NIT Jalandhar...</strong></p>
-      <p>The day I came here was also the day I was born — my birthday.</p>
-      <p>And now, looking back, this one year has been a journey full of memories: rushing to classes, getting ready in a hurry, late-night talks with my roommate who feels like a sister, and so much more...</p>
-      <p>Academically, I’ve been somewhere in the middle — not too great, not too bad. Just figuring it out as I go.</p>
-      <p>But this year has taught me a lot — about life, people, independence, and myself.</p>
+        <h3>💪 Disciplined Day & DSA Wins</h3>
+        <p>Today was a super disciplined day.</p>
+        <p>I started with my DSA targets and, in a structured and focused way, completed each and every one of them. It felt like a total win-win situation for me.</p>
+        <p>Yeah, I struggled through the questions, but in the end, I did it!</p>
+        <p>Now I’ll be moving on to the second part of my day — <strong>web development</strong> — right after writing this blog.</p>
+        <p>Since I’ve started loving these things now... it feels really good. 😊</p>
     </section>
 
-    <section class="section-box">
-      <h3>💭 Random thoughts...</h3>
-      <p>College life isn’t just about books and grades. It’s about the little things — sharing food, waiting for water in the hostel, laughing over nothing, and finding peace in the chaos.</p>
-      <p>So here’s to the end of the first chapter — and to many more to come.</p>
-    </section>
-  </article>
+    </article>
+  </div>
 
   <footer>
     <p>© 2025 DailyU Blog</p>
