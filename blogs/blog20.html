@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 19 – "Just Revising Sorting… But Then I Got Curious” | DailyU Blog</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../images/favicon.png" type="image/png" />
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      margin: auto;
+      padding: 1rem;
+    }
+
+    header {
+      background-color: #111;
+      color: #eee;
+      padding: 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      color: #0ff;
+      text-align: center;
+    }
+
+    .header-second-line {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-top: 1rem;
+    }
+
+    .back-center {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .header-second-line button {
+      position: absolute;
+      right: 0;
+      background-color: #0ff;
+      color: #111;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .header-second-line button:hover {
+      background-color: #0cc;
+      color: #fff;
+    }
+
+    .date {
+      color: #0ff;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .section-box {
+      background: #111;
+      padding: 1.5rem;
+      border-left: 5px solid #0ff;
+      border-radius: 12px;
+      margin-top: 2rem;
+    }
+
+    .section-box h3 {
+      margin-top: 0;
+    }
+
+    footer {
+      width: 100%;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    body.light-mode {
+      background-color: #f0f0f0;
+      color: #111;
+    }
+
+    body.light-mode header {
+      background-color: #fff;
+      color: #000 !important;
+    }
+
+    body.light-mode header h1,
+    body.light-mode .date {
+      color: #000 !important;
+    }
+
+    body.light-mode .header-second-line button,
+    body.light-mode nav a {
+      color: #000 !important;
+    }
+
+    body.light-mode footer {
+      background-color: #f0f0f0;
+      color: #111;
+    }
+
+    body.light-mode .section-box {
+      background: #fff;
+      color: #222;
+      border-left-color: #0cc;
+      box-shadow: 0 0 12px #0cc8;
+    }
+
+    body.light-mode nav a:hover {
+      color: #003344;
+    }
+
+    body.light-mode .header-second-line button {
+      background-color: #005577;
+      color: #fff;
+    }
+
+    body.light-mode .header-second-line button:hover {
+      background-color: #003344;
+    }
+
+    body.light-mode #jokeGame input {
+      background-color: #fff;
+      color: #111;
+      border-color: #0cc;
+    }
+     
+    .sort-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+    }
+
+    .sort-table th,
+    .sort-table td {
+        padding: 12px;
+        border: 1px solid #5e5e5e;
+        text-align: center;
+        font-size: 0.95rem;
+    }
+
+    .sort-table th {
+        background-color: #222;
+        color: #fff;
+    }
+
+    .sort-table td {
+        background-color: #111;
+        color: #eee;
+    }
+
+
+    @media (max-width: 600px) {
+      .header-second-line {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header-second-line button {
+        position: static;
+        margin-top: 1rem;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Day 19 – "Just Revising Sorting… But Then I Got Curious”</h1>
+    <div class="header-second-line">
+      <nav class="back-center">
+        <a href="../home.html">← Back</a>
+      </nav>
+      <button id="toggleModeBtn">Dark/Light Mode</button>
+    </div>
+  </header>
+
+<div class="container">
+  <article>
+    <p class="date">June 29, 2025</p>
+
+    <section class="section-box">
+      <h3>🧠 Sorting: The Real-Life Version</h3>
+      <p>
+        Being someone who <em>wants</em> to be disciplined, I try, try, and try again — and most of the time, I succeed.<br>
+        Today, while revising my sorting techniques, I got the idea of writing a blog about sorting.<br>
+        I was genuinely curious about where <strong>insertion sort</strong> is used in real life.<br>
+        After some research, I discovered something really interesting:
+      </p>
+      <blockquote>
+        Insertion Sort is actually used inside <strong>Timsort</strong>, which powers built-in sorting functions in Python, Java, and Android systems — used every day in top tech companies like <strong>Google</strong>, <strong>Microsoft</strong>, and <strong>Amazon</strong> for sorting collections.
+      </blockquote>
+      <p>
+        While exploring more about sorting, I came across these fascinating takeaways:
+      </p>
+      <ul>
+        <li>✅ <strong>Timsort</strong> is the best practical sorting algorithm.</li>
+        <li>🔥 <strong>Quick Sort</strong> is the best theoretical average-case performer.</li>
+        <li>💡 <strong>Merge Sort</strong> is the best for guaranteed stable sorting and parallelism.</li>
+      </ul>
+    </section>
+
+    <section class="section-box">
+      <h3>📊 Sorting Algorithms Comparison</h3>
+      <div style="overflow-x:auto;">
+        <table class="sort-table" style="width:100%;border-collapse:collapse;">
+          <thead>
+            <tr style="background:#222;color:#fff;">
+              <th>Algorithm</th>
+              <th>Best Case</th>
+              <th>Worst Case</th>
+              <th>Stable?</th>
+              <th>Space</th>
+              <th>Used In</th>
+            </tr>
+          </thead>
+          <tbody style="color:#eee;">
+            <tr><td>Quick Sort</td><td>O(n log n)</td><td>O(n²)</td><td>No</td><td>O(log n)</td><td>Large arrays, systems</td></tr>
+            <tr><td>Merge Sort</td><td>O(n log n)</td><td>O(n log n)</td><td>Yes</td><td>O(n)</td><td>Linked lists, parallel sorting</td></tr>
+            <tr><td>Timsort</td><td>O(n)</td><td>O(n log n)</td><td>Yes</td><td>O(n)</td><td>Python, Java, Android</td></tr>
+            <tr><td>Insertion Sort</td><td>O(n)</td><td>O(n²)</td><td>Yes</td><td>O(1)</td><td>Nearly sorted data, small inputs</td></tr>
+            <tr><td>Selection Sort</td><td>O(n²)</td><td>O(n²)</td><td>No</td><td>O(1)</td><td>Picking top k elements</td></tr>
+            <tr><td>Heap Sort</td><td>O(n log n)</td><td>O(n log n)</td><td>No</td><td>O(1)</td><td>Priority queues, OS schedulers</td></tr>
+            <tr><td>Counting Sort</td><td>O(n + k)</td><td>O(n + k)</td><td>Yes</td><td>O(k)</td><td>Scores, IDs, ranges</td></tr>
+            <tr><td>Radix Sort</td><td>O(nk)</td><td>O(nk)</td><td>Yes</td><td>O(n + k)</td><td>Phone numbers, zip codes</td></tr>
+          </tbody>
+        </table>
+        <br>
+        <p>
+            I’ve brushed up the theory today, so maybe tomorrow I’ll try solving a few sorting questions — just to see how much my brain actually retained. 😄
+        </p>
+        </div>
+    </section>
+  </article>
+</div>
+
+
+  <footer>
+    <p>© 2025 DailyU Blog</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleModeBtn');
+    const body = document.body;
+
+    if (localStorage.getItem('mode') === 'light') {
+      body.classList.add('light-mode');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+      localStorage.setItem('mode', body.classList.contains('light-mode') ? 'light' : 'dark');
+    });
+  </script>
+</body>
+</html>
