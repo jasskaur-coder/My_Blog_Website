@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 21 – Popular Tools in Game Development</title>
+  <link rel="icon" href="../images/favicon.png" type="image/png" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #eee;
+      overflow-x: hidden;
+      transition: 0.4s;
+    }
+     
+    header {
+      background: url('https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1950&q=80') center/cover fixed;
+      height: 60vh;
+      color: #0ff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 1;
+    }
+
+    header h1 {
+      z-index: 2;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+      position: relative;
+     }
+    .header-actions {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+        z-index: 2;
+        position: relative;
+        justify-content: center;
+        flex-wrap: wrap;
+     }
+
+    .back-button {
+        color: #0ff;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+     }
+    #toggleModeBtn {
+        position: absolute;
+
+        right: 1rem;
+        top: 1rem;
+
+        background: #0ff;
+        color: #111;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        z-index: 2;
+}
+        #toggleModeBtn:hover {
+            background: #0cc;
+            color: #fff;
+        }
+        .date
+        {
+            color: #0ff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin: 1rem 0;
+            z-index: 2;
+            position: relative;
+            text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+        }
+
+        .toggle-btn {
+        margin-top: 1rem;
+        z-index: 2;
+        position: relative;
+        }
+
+        .toggle-btn button {
+        background: #0ff;
+        color: #111;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        }
+
+    .container {
+      max-width: 900px;
+      margin: -2rem auto 3rem;
+      padding: 1rem;
+    }
+
+    .blog-card {
+      background: rgba(17, 17, 17, 0.85);
+      /* backdrop-filter: blur(8px); */
+      border-left: 5px solid #0ff;
+      border-radius: 16px;
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 10px 30px rgba(0, 255, 255, 0.1);
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 0.7s ease;
+    }
+
+    .blog-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .blog-card h3 {
+      color: #0ff;
+      margin-top: 0;
+    }
+
+  
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    a {
+      color: #0ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #0cc;
+    }
+
+    /* Light mode */
+    body.light-mode {
+      background-color: #f0f0f0;
+      color: #111;
+    }
+
+    body.light-mode header {
+      color: #000;
+    }
+
+    body.light-mode .blog-card {
+      background: rgba(255, 255, 255, 0.9);
+      color: #111;
+      border-left-color: #0cc;
+      box-shadow: 0 8px 20px rgba(0, 170, 255, 0.2);
+    }
+
+    body.light-mode .blog-card h3 {
+      color: #0077aa;
+    }
+
+    body.light-mode .toggle-btn button {
+      background: #070707;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .blog-card {
+        padding: 1.5rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎮 Popular Tools in Game Dev – What the Pros and Rookies Use!</h1>
+    <div class="header-actions">
+        <a href="../home.html" class="back-button">← Back</a>
+        <button id="toggleModeBtn">Switch to Light Mode</button>
+    </div>
+    <p class="date">📅 July 2, 2025</p>
+</header>
+
+
+  <div class="container">
+    
+
+    <div class="blog-card animate-on-scroll">
+      <h3>🧠 1. Game Engines – The Brain of a Game</h3>
+      <p>Game engines handle physics, rendering, collisions, audio, animation—you name it.</p>
+      <ul>
+        <li><strong>🎯 Unity (C#)</strong> – Great for mobile/indie games. Easy & powerful.</li>
+        <li><strong>⚙️ Unreal Engine (C++)</strong> – AAA visuals & Blueprint scripting.</li>
+        <li><strong>🧩 Godot (GDScript)</strong> – Lightweight, open-source, ideal for 2D.</li>
+        <li><strong>🐍 Pygame</strong> – Python-based, perfect for learning 2D game logic.</li>
+      </ul>
+    </div>
+
+    <div class="blog-card animate-on-scroll">
+      <h3>🎨 2. Graphics & Asset Tools – The Artist’s Playground</h3>
+      <ul>
+        <li><strong>🌀 Blender</strong> – 3D modeling, animation, rendering. Industry-loved and FREE!</li>
+        <li><strong>📷 Photoshop & Illustrator</strong> – UI, icons, 2D textures.</li>
+        <li><strong>🖼️ Aseprite & Piskel</strong> – For pixel-perfect retro games.</li>
+      </ul>
+    </div>
+
+    <div class="blog-card animate-on-scroll">
+      <h3>🔊 3. Audio Tools – The Ears of a Game</h3>
+      <ul>
+        <li><strong>🎧 Audacity</strong> – Simple, effective audio editing.</li>
+        <li><strong>🎵 FL Studio / LMMS</strong> – Full-featured DAWs for game soundtracks.</li>
+      </ul>
+    </div>
+
+    <div class="blog-card animate-on-scroll">
+      <h3>🧪 4. Testing & Debugging Tools</h3>
+      <p>Tools that help optimize, debug, and inspect performance:</p>
+      <ul>
+        <li>Unity Profiler / Unreal Insights</li>
+        <li>Visual Studio / Rider (IDE debugging)</li>
+      </ul>
+    </div>
+
+    <div class="blog-card animate-on-scroll">
+      <h3>☁️ 5. Version Control & Team Collaboration</h3>
+      <ul>
+        <li><strong>GitHub / GitLab</strong> – For managing code versions and teams.</li>
+        <li><strong>Trello / Notion / Jira</strong> – For team communication & planning.</li>
+      </ul>
+    </div>
+
+    <div class="blog-card animate-on-scroll">
+      <h3>✨ Final Thought</h3>
+      <p>I get bored pretty easily, but games have always been therapy for me.... especially racing ones...... Drifting, speeding... it just helps me let out frustration.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 DailyU Blog</p>
+  </footer>
+
+  <script>
+    // Toggle Mode
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.getElementById('toggleModeBtn');
+      const body = document.body;
+      const savedMode = localStorage.getItem('mode');
+
+      if (savedMode === 'light') {
+        body.classList.add('light-mode');
+        toggleBtn.textContent = 'Switch to Dark Mode';
+      }
+
+      toggleBtn.addEventListener('click', () => {
+        body.classList.toggle('light-mode');
+        const isLight = body.classList.contains('light-mode');
+        localStorage.setItem('mode', isLight ? 'light' : 'dark');
+        toggleBtn.textContent = isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+      });
+
+      // Animate on Scroll
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      document.querySelectorAll('.animate-on-scroll').forEach(card => {
+        observer.observe(card);
+      });
+    });
+  </script>
+</body>
+</html>

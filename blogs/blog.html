@@ -17,13 +17,14 @@
 
     .container {
       margin: auto;
-      padding: 1rem;
+      padding: 2rem 1rem;
+      max-width: 900px;
     }
 
     header {
       background-color: #111;
       color: #eee;
-      padding: 1rem;
+      padding: 1.5rem 1rem;
     }
 
     header h1 {
@@ -56,7 +57,7 @@
       border-radius: 8px;
       font-weight: bold;
       cursor: pointer;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      transition: 0.3s ease;
     }
 
     .header-second-line button:hover {
@@ -67,25 +68,32 @@
     .date {
       color: #0ff;
       font-style: italic;
-      margin-bottom: 1rem;
+      margin: 2rem 0 1rem;
+      text-align: center;
     }
 
     .section-box {
-      background: #111;
-      padding: 1.5rem;
-      border-left: 5px solid #0ff;
-      border-radius: 12px;
-      margin-top: 2rem;
+      background: #1a1a1a;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 0 20px #0ff4;
+      border-left: 6px solid #0ff;
+      opacity: 0;
+      transform: translateY(50px);
     }
 
     .section-box h3 {
       margin-top: 0;
+      color: #0ff;
+    }
+
+    .section-box p {
+      line-height: 1.6;
     }
 
     footer {
-      width: 100%;
       text-align: center;
-      margin-top: 2rem;
+      margin: 3rem 0 1rem;
       font-size: 0.9rem;
       color: #888;
     }
@@ -98,6 +106,7 @@
     a:hover {
       color: #0cc;
     }
+
     body.light-mode {
       background-color: #f0f0f0;
       color: #111;
@@ -108,9 +117,19 @@
       color: #000;
     }
 
-    body.light-mode header h1,
-    body.light-mode .date {
-      color: #000;
+    body.light-mode .section-box {
+      background: #fff;
+      color: #111;
+      border-left-color: #0cc;
+      box-shadow: 0 0 12px #0cc8;
+    }
+
+    body.light-mode a {
+      color: #005577;
+    }
+
+    body.light-mode a:hover {
+      color: #003344;
     }
 
     body.light-mode .header-second-line button {
@@ -120,35 +139,6 @@
 
     body.light-mode .header-second-line button:hover {
       background-color: #52a0b9;
-    }
-
-    body.light-mode .back-button{
-      color: #000;
-    }
-
-    body.light-mode .section-box {
-      background: #fff;
-      color: #222;
-      border-left-color: #0cc;
-      box-shadow: 0 0 12px #0cc8;
-    }
-
-    body.light-mode .sort-table thead th {
-      background-color: #ddd;
-      color: #111;
-    }
-
-    body.light-mode .sort-table td {
-      background-color: #fff;
-      color: #111;
-    }
-
-    body.light-mode a {
-      color: #005577;
-    }
-
-    body.light-mode a:hover {
-      color: #003344;
     }
 
     @media (max-width: 600px) {
@@ -170,42 +160,32 @@
     <h1>Day 20 – “Frameworks? I Picked Tailwind..., and Here's Why”</h1>
     <div class="header-second-line">
       <nav class="back-center">
-        <a class = "back-button" href="../home.html">← Back</a>
+        <a class="back-button" href="../home.html">← Back</a>
       </nav>
       <button id="toggleModeBtn">Switch to Light Mode</button>
     </div>
   </header>
 
   <div class="container">
-    <article>
-      <p class="date">July 1, 2025</p>
-    <section class="section-box">
-        <h3>🎯 Frameworks? Let’s Talk About Tailwind CSS</h3>
-        <p>
-            When people say frameworks, most think of React, Angular, or Vue…  
-            But my fav? Tailwind CSS.  
-        </p>
-        <p>
-            It’s not a JavaScript framework, it’s a utility-first CSS framework that literally changed how I write UI.
-        </p>
-        <p>
-            Instead of writing long CSS files or switching between HTML and stylesheets, I just write everything directly in class names fast, consistent, and kinda good...
-        </p>
-        <p>
-            The best part? I don’t have to invent class names like <code>.card-box-centered-blue-v2</code> anymore...
-            Tailwind already gives me all the utilities I need -margin, padding, colors, responsiveness....
-        </p>
-        <p>
-            It feels like designing in code. And honestly? I love it.
-        </p>
-    </section>
+    <p class="date">July 1, 2025</p>
 
+    <article>
+      <section class="section-box animated-section">
+        <h3>🎯 Frameworks? Let’s Talk About Tailwind CSS</h3>
+        <p>When people say frameworks, most think of React, Angular, or Vue… But my fav? Tailwind CSS.</p>
+        <p>It’s not a JavaScript framework, it’s a utility-first CSS framework that literally changed how I write UI.</p>
+        <p>Instead of writing long CSS files or switching between HTML and stylesheets, I just write everything directly in class names fast, consistent, and kinda good...</p>
+        <p>The best part? I don’t have to invent class names like <code>.card-box-centered-blue-v2</code> anymore... Tailwind already gives me all the utilities I need—margin, padding, colors, responsiveness....</p>
+        <p>It feels like designing in code. And honestly? I love it.</p>
+      </section>
     </article>
   </div>
 
   <footer>
     <p>© 2025 DailyU Blog</p>
   </footer>
+
+  <!-- === Toggle Mode Script === -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const toggleBtn = document.getElementById('toggleModeBtn');
@@ -215,8 +195,6 @@
       if (savedMode === 'light') {
         body.classList.add('light-mode');
         toggleBtn.textContent = 'Switch to Dark Mode';
-      } else {
-        toggleBtn.textContent = 'Switch to Light Mode';
       }
 
       toggleBtn.addEventListener('click', () => {
@@ -225,6 +203,23 @@
         localStorage.setItem('mode', isLight ? 'light' : 'dark');
         toggleBtn.textContent = isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';
       });
+    });
+  </script>
+
+  <!-- === GSAP Animations === -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".animated-section", {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".animated-section",
+        start: "top 80%",
+      },
     });
   </script>
 </body>
