@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 20 – “Frameworks? I Picked Tailwind..., and Here's Why” | DailyU Blog</title>
+  <link rel="icon" href="../images/favicon.png" type="image/png" />
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      margin: auto;
+      padding: 1rem;
+    }
+
+    header {
+      background-color: #111;
+      color: #eee;
+      padding: 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      color: #0ff;
+      text-align: center;
+    }
+
+    .header-second-line {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-top: 1rem;
+    }
+
+    .back-center {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .header-second-line button {
+      position: absolute;
+      right: 0;
+      background-color: #0ff;
+      color: #111;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .header-second-line button:hover {
+      background-color: #0cc;
+      color: #fff;
+    }
+
+    .date {
+      color: #0ff;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .section-box {
+      background: #111;
+      padding: 1.5rem;
+      border-left: 5px solid #0ff;
+      border-radius: 12px;
+      margin-top: 2rem;
+    }
+
+    .section-box h3 {
+      margin-top: 0;
+    }
+
+    footer {
+      width: 100%;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    a {
+      color: #0ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #0cc;
+    }
+    body.light-mode {
+      background-color: #f0f0f0;
+      color: #111;
+    }
+
+    body.light-mode header {
+      background-color: #fff;
+      color: #000;
+    }
+
+    body.light-mode header h1,
+    body.light-mode .date {
+      color: #000;
+    }
+
+    body.light-mode .header-second-line button {
+      background-color: #070707;
+      color: #fff;
+    }
+
+    body.light-mode .header-second-line button:hover {
+      background-color: #52a0b9;
+    }
+
+    body.light-mode .back-button{
+      color: #000;
+    }
+
+    body.light-mode .section-box {
+      background: #fff;
+      color: #222;
+      border-left-color: #0cc;
+      box-shadow: 0 0 12px #0cc8;
+    }
+
+    body.light-mode .sort-table thead th {
+      background-color: #ddd;
+      color: #111;
+    }
+
+    body.light-mode .sort-table td {
+      background-color: #fff;
+      color: #111;
+    }
+
+    body.light-mode a {
+      color: #005577;
+    }
+
+    body.light-mode a:hover {
+      color: #003344;
+    }
+
+    @media (max-width: 600px) {
+      .header-second-line {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header-second-line button {
+        position: static;
+        margin-top: 1rem;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Day 22 – “Lessons from My Past: What My Mistakes Taught Me”</h1>
+    <div class="header-second-line">
+      <nav class="back-center">
+        <a class = "back-button" href="../home.html">← Back</a>
+      </nav>
+      <button id="toggleModeBtn">Switch to Light Mode</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <article>
+      <p class="date">July 3, 2025</p>
+    <section class="section-box">
+        <h1>The Strength Behind My Mistakes: A Reflection</h1>
+
+        <p>Today's blog is a reflection blog - no tech blog today.</p>
+
+        <p>I just want to reflect on the past, the mistakes I’ve made, and how I’ve overcome them.</p>
+
+        <p>So far, I’ve made many mistakes - ranging from small ones to some of the biggest and worst. Sometimes, I regret them. But other times, I think, <em>if those things hadn’t happened, maybe I wouldn’t be the person I am today.</em></p>
+
+        <p>Of course, I do regret some of them… but I’ve also discovered the best parts of myself through those mistakes. They made me stronger, more mature (because honestly, I wasn’t before 😅), and I’ve realized that life’s mistakes are some of the best lessons I’ve learned so far.</p>
+        
+        <p>So, I just want to say that if you’re going through a tough time, or if you’ve made mistakes, don’t worry. You’ll get through it. You’ll learn from it. And you’ll become a better person.....</p>
+    </section>
+
+    </article>
+  </div>
+
+  <footer>
+    <p>© 2025 DailyU Blog</p>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.getElementById('toggleModeBtn');
+      const body = document.body;
+
+      const savedMode = localStorage.getItem('mode');
+      if (savedMode === 'light') {
+        body.classList.add('light-mode');
+        toggleBtn.textContent = 'Switch to Dark Mode';
+      } else {
+        toggleBtn.textContent = 'Switch to Light Mode';
+      }
+
+      toggleBtn.addEventListener('click', () => {
+        body.classList.toggle('light-mode');
+        const isLight = body.classList.contains('light-mode');
+        localStorage.setItem('mode', isLight ? 'light' : 'dark');
+        toggleBtn.textContent = isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+      });
+    });
+  </script>
+</body>
+</html>
