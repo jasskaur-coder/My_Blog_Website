@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 23 - Python Libraries Explained — With a Dash of Game Dev Fun</title>
+  <link rel="icon" href="../images/favicon.png" type="image/png" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #eee;
+      overflow-x: hidden;
+      transition: 0.4s;
+    }
+     
+   header {
+    background: url('../images/pygame.svg') center center / cover no-repeat fixed;
+    background-size: contain;
+    height: 60vh;
+    color: #0ff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 1;
+    }
+
+    header h1 {
+      z-index: 2;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+      position: relative;
+     }
+    .header-actions {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+        z-index: 2;
+        position: relative;
+        justify-content: center;
+        flex-wrap: wrap;
+     }
+
+    .back-button {
+        color: #0ff;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+     }
+    #toggleModeBtn {
+        position: absolute;
+
+        right: 1rem;
+        top: 1rem;
+
+        background: #0ff;
+        color: #111;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        z-index: 2;
+}
+        #toggleModeBtn:hover {
+            background: #0cc;
+            color: #fff;
+        }
+        .date
+        {
+            color: #0ff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin: 1rem 0;
+            z-index: 2;
+            position: relative;
+            text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+        }
+
+        .toggle-btn {
+        margin-top: 1rem;
+        z-index: 2;
+        position: relative;
+        }
+
+        .toggle-btn button {
+        background: #0ff;
+        color: #111;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        }
+
+    .container {
+      max-width: 900px;
+      margin: -2rem auto 3rem;
+      padding: 1rem;
+    }
+
+    .pygame
+    {
+      display: flex; 
+      flex-direction: column;
+      gap: 1em;
+    }
+    .blog-card {
+      background: rgba(17, 17, 17, 0.85);
+      /* backdrop-filter: blur(8px); */
+      border-left: 5px solid #0ff;
+      border-radius: 16px;
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 10px 30px rgba(0, 255, 255, 0.1);
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 0.7s ease;
+    }
+
+    .blog-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .blog-card h3 {
+      color: #0ff;
+      margin-top: 0;
+    }
+
+  
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    a {
+      color: #0ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #0cc;
+    }
+
+    /* Light mode */
+    body.light-mode {
+      background-color: #f0f0f0;
+      color: #111;
+    }
+
+    body.light-mode header {
+      color: #000;
+    }
+
+    body.light-mode .blog-card {
+      background: rgba(255, 255, 255, 0.9);
+      color: #111;
+      border-left-color: #0cc;
+      box-shadow: 0 8px 20px rgba(0, 170, 255, 0.2);
+    }
+
+    body.light-mode .blog-card h3 {
+      color: #0077aa;
+    }
+
+    body.light-mode .toggle-btn button {
+      background: #070707;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .blog-card {
+        padding: 1.5rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📚 Python Libraries Explained — With a Dash of Game Dev Fun </h1>
+
+</h1>
+    <div class="header-actions">
+        <a href="../home.html" class="back-button">← Back</a>
+        <button id="toggleModeBtn">Switch to Light Mode</button>
+    </div>
+    <p class="date">📅 July 5, 2025</p>
+</header>
+
+
+  <div class="container">
+    
+
+    <div class="blog-card animate-on-scroll">
+      <h2>🎮 My Journey with Python Game Development</h2>
+      <p>
+        Till now, I have mostly made games using Python. There are so many libraries that help in game development, but the ones I personally enjoy the most are <strong>Tkinter</strong> and <strong>Pygame</strong>.
+      </p>
+      <p>
+        Honestly, Pygame is my favorite - it’s just the best.
+      </p>
+      <p>
+        I almost forgot that I actually <em>made</em> games! 😅 Not the big fancy ones, of course, but still… I made them with passion. And that matters.
+      </p>
+      <p>
+        So today, I’m writing about Python libraries - especially about <strong>Pygame</strong> — the one that sparked my love for creative coding.
+      </p>
+    </div>
+
+    <div class="blog-card animate-on-scroll">
+      <h2>📚 What Are Python Libraries?</h2>
+      <p>
+        Python libraries are collections of pre-written code that help you perform tasks without coding everything from scratch. They make development faster, easier, and more powerful.
+      </p>
+
+      <h3>💡 Why Use Them?</h3>
+      <ul>
+        <li>✅ Save time and effort</li>
+        <li>✅ Avoid rewriting code</li>
+        <li>✅ Access powerful features easily</li>
+      </ul>
+
+      <h3>🔍 Popular Libraries by Category</h3>
+      <ul>
+        <li><strong>Data Science:</strong> NumPy, Pandas, Matplotlib</li>
+        <li><strong>Web Dev:</strong> Flask, Django, Requests</li>
+        <li><strong>Game Dev:</strong> Pygame, Tkinter</li>
+        <li><strong>Automation:</strong> pyautogui, openpyxl</li>
+        <li><strong>Fun & Visual:</strong> Turtle, Pillow, Rich</li>
+      </ul>
+
+      <p>
+        These libraries open up a whole new world of possibilities - and Pygame is one of the most fun to explore!
+      </p>
+    </div>
+
+    <div class="blog-card animate-on-scroll">
+      <h3>🕹️ Pygame: Where Code Meets Creativity</h3>
+      <p>Pygame is a free and open-source cross-platform library for the development of multimedia applications like video games using Python. It uses the Simple DirectMedia Layer library and several other popular libraries to abstract the most common functions, making writing these programs a more intuitive task.</p>
+      <h2>🕹️ Features of Pygame Library</h2>
+      <ul  class="pygame">
+        <li><strong>🔄 Game Loop Control:</strong> Easy tools to manage the game loop efficiently.</li>
+        <li><strong>🎨 Graphics Support:</strong> With pygame, creating dynamic and engaging graphics has never been easier. The library provides simple yet effective tools for 2D graphics and animation, including support for images, rectangles, and polygon shapes. Whether you’re a seasoned game developer or just starting out, pygame has you covered.</li>
+        <li><strong>🖼️ Sprite & Image Handling:</strong> Load and control game characters, objects, and backgrounds.</li>
+        <li><strong>🎵 Sound & Music:</strong> Pygame also includes support for playing and manipulating sound and music, making it easy to add sound effects and background music to your games. With support for WAV, MP3, and OGG file formats, you have plenty of options to choose from.</li>
+        <li><strong>🖱️ Input Handling:</strong> Pygame provides intuitive functions for handling keyboard, mouse, and joystick input, allowing you to quickly and easily implement player controls in your games. No more struggling with complex input code, pygame makes it simple.</li>
+        <li><strong>⏱️ Time Management:</strong> Control frame rate, manage timing, and create delays.</li>
+        <li><strong>🧱 Collision Detection:</strong> Detect and manage collisions between objects or sprites.</li>
+        <li><strong>💻 Cross-Platform:</strong> Pygame works on Windows, macOS, and Linux without any major changes.</li>
+        <li><strong>🕹️ Game-Development</strong> Lastly, pygame provides a comprehensive suite of tools and features specifically designed for game development. From collision detection to sprite management, pygame has everything you need to create exciting and engaging games. Whether you’re building a platformer, puzzle game, or anything in between, pygame has you covered.</li>
+      </ul>
+    </div>
+
+    <div class="blog-card animate-on-scroll">
+      <h3>✨ Resouces I used for this Blog.....</h3>
+      <ol>
+        <li><p>Official Python Library Index<a href="https://pypi.org"> - Read here....</a></p></li>
+        <li><p>Real Python<a href="https://realpython.com"> - Read here....</a></p></li>
+        <li>Rest info from Websites.....</li>
+        </ol>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 DailyU Blog</p>
+  </footer>
+
+  <script>
+    // Toggle Mode
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.getElementById('toggleModeBtn');
+      const body = document.body;
+      const savedMode = localStorage.getItem('mode');
+
+      if (savedMode === 'light') {
+        body.classList.add('light-mode');
+        toggleBtn.textContent = 'Switch to Dark Mode';
+      }
+
+      toggleBtn.addEventListener('click', () => {
+        body.classList.toggle('light-mode');
+        const isLight = body.classList.contains('light-mode');
+        localStorage.setItem('mode', isLight ? 'light' : 'dark');
+        toggleBtn.textContent = isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+      });
+
+      // Animate on Scroll
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      document.querySelectorAll('.animate-on-scroll').forEach(card => {
+        observer.observe(card);
+      });
+    });
+  </script>
+</body>
+</html>
