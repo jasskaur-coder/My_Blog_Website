@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 24 – "XOR Basis Algorithm" | DailyU Blog</title>
+  <link rel="icon" href="../images/favicon.png" type="image/png" />
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      margin: auto;
+      padding: 1rem;
+    }
+
+    header {
+      background-color: #111;
+      color: #eee;
+      padding: 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      color: #0ff;
+      text-align: center;
+    }
+
+    .header-second-line {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-top: 1rem;
+    }
+
+    .back-center {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .header-second-line button {
+      position: absolute;
+      right: 0;
+      background-color: #0ff;
+      color: #111;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .header-second-line button:hover {
+      background-color: #0cc;
+      color: #fff;
+    }
+
+    .date {
+      color: #0ff;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .section-box {
+      background: #111;
+      padding: 1.5rem;
+      border-left: 5px solid #0ff;
+      border-radius: 12px;
+      margin-top: 2rem;
+    }
+
+    .section-box h3 {
+      margin-top: 0;
+    }
+
+   .xor {
+        display: block;
+        margin: 1rem auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .properties{
+        text-align: center;
+    }
+
+    footer {
+      width: 100%;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    a {
+      color: #0ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #0cc;
+    }
+    body.light-mode {
+      background-color: #f0f0f0;
+      color: #111;
+    }
+
+    body.light-mode header {
+      background-color: #fff;
+      color: #000;
+    }
+
+    body.light-mode header h1,
+    body.light-mode .date {
+      color: #000;
+    }
+
+    body.light-mode .header-second-line button {
+      background-color: #070707;
+      color: #fff;
+    }
+
+    body.light-mode .header-second-line button:hover {
+      background-color: #52a0b9;
+    }
+
+    body.light-mode .back-button{
+      color: #000;
+    }
+
+    body.light-mode .section-box {
+      background: #fff;
+      color: #222;
+      border-left-color: #0cc;
+      box-shadow: 0 0 12px #0cc8;
+    }
+
+    body.light-mode .sort-table thead th {
+      background-color: #ddd;
+      color: #111;
+    }
+
+    body.light-mode .sort-table td {
+      background-color: #fff;
+      color: #111;
+    }
+
+    body.light-mode a {
+      color: #005577;
+    }
+
+    body.light-mode a:hover {
+      color: #003344;
+    }
+
+    @media (max-width: 600px) {
+      .header-second-line {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header-second-line button {
+        position: static;
+        margin-top: 1rem;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Day 24 – "XOR Basis Algorithm" </h1>
+    <div class="header-second-line">
+      <nav class="back-center">
+        <a class = "back-button" href="../home.html">← Back</a>
+      </nav>
+      <button id="toggleModeBtn">Switch to Light Mode</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <article>
+      <p class="date">July 7, 2025</p>
+    <section class="section-box">
+         <p>The XOR operation between two numbers P and Q can be looked in a different way as the bitwise sum modulo 2 on the bits of P and Q. Consider P = 10010 and Q = 00110.</p>
+          <img src="../images/xor.png" class="xor"  alt="">
+          <p>
+            Starting from leftmost, we verify the above statement : 
+          </p>
+          <ul>
+            <li>(1 + 0) % 2 = 1</li>
+            <li>(0 + 0) % 2 = 0</li>
+            <li>(0 + 1) % 2 = 1</li>
+            <li>(1 + 1) % 2 = 0</li>
+            <li>(0 + 0) % 2 = 0</li>
+          </ul>
+          <p>A binary number is in the form of a ℤ2d vector where d is the number of bits in the binary number and 2 represents the allowed integer values in the vector viz., {0, 1}. So, the result of a XOR operation between two numbers P and Q is the vector addition mod 2 of two ℤ2d vectors P and Q.</p>
+           <p class="properties">P + Q = P ⊕ Q</p>
+           <p class="properties">For subtracting Q, XOR with Q on RHS to obtain P on RHS,</p>
+           <p class="properties">P = P ⊕ Q ⊕ Q</p>
+           <p class="properties">P = P</p>
+           <p>Now, given an array A of N non-negative integers, we need to find the Basis B for the elements of the array when represented as  ℤ2d vectors in form of a bitmask.</p>
+           <p>Some points to note -</p>
+           <ul>
+            <li>The size of the basis B for a d-dimensional Vector Space can not exceed d.</li>
+            <li>The basis vectors are independent, i.e., none of them can be expressed as a linear combination of a subset of basis vectors (other than the vector itself).</li>
+           </ul>
+    </section>
+    <section class="section-box">
+            <h3>Algorithm of XOR</h3>
+            <p>The algorithm goes as follows:</p>
+            <ul>
+                <li>Assume we have the basis for all the vectors till index 'i' (i < N) and we need to check if A[i + 1] can be represented as a linear combination of current basis vectors.</li>
+                <li>If not so, then add A[i + 1] to our basis, otherwise increment the index. We can effectively check this if we have all our basis vectors differ by the first set bit index (from left), let's denote it by msb(B[j]).</li>
+                <li>Start checking from the left bits, if index 's' is set in current value of A[i + 1] and there is no basis vector with msb(B[j]) = s, then no linear combination of the existing basis vectors can represent current value of A[i + 1]. 
+                     <ul>
+                        <li>So, insert current value of A[i + 1] in the basis. </li>
+                        <li>Otherwise, subtract B[j] with msb = s from A[i + 1] by XORing with B[j] and continue with other bits.</li>
+                        <li>If at end A[i + 1] is a null vector, then it can be represented as linear combination of the current basis vectors, otherwise not and has to be inserted in the basis.</li>
+                     </ul>
+                </li>
+            </ul>
+    </section>
+    <section class="section-box">
+        <h3>Example</h3>
+        <p>Let's consider an array <strong>A = [3, 10, 5]</strong>. We want to find the XOR basis for this array.</p>
+        
+        <p>Step-by-step construction of basis:</p>
+        <ul>
+            <li><strong>Start with an empty basis.</strong></li>
+            <li>Insert <strong>3</strong> (binary: <code>011</code>) → No basis vector yet, so add 3 to basis. <br>Basis = [3]</li>
+            <li>Next element: <strong>10</strong> (binary: <code>1010</code>) → Not representable using 3, so add it to basis.<br>Basis = [3, 10]</li>
+            <li>Next element: <strong>5</strong> (binary: <code>0101</code>) → Check XOR with current basis:
+            <ul>
+                <li>5 ⊕ 3 = 6</li>
+                <li>6 ⊕ 10 = 12</li>
+                <li>Final result ≠ 0 → Not representable → Add 5 to basis.</li>
+            </ul>
+            Final Basis = [3, 10, 5]
+            </li>
+        </ul>
+
+        <p>So the basis for array A = [3, 10, 5] is: <strong>[3, 10, 5]</strong>.</p>
+
+        <hr>
+
+        <p><strong>Common Use Cases in DSA:</strong></p>
+        <ul>
+            <li>Finding Maximum XOR Subset</li>
+            <li>Minimum XOR Pair</li>
+            <li>Linear Independence in Bitmasking Problems (e.g., <a href="https://codeforces.com/problemset/problem/706/D" target="_blank" rel="noopener noreferrer">Codeforces 706D - Vasiliy's Multiset</a>)</li>
+        </ul>
+    </section>
+
+    <section class="section-box">
+        <h3>Resources Used......</h3>
+        <ol>
+            <li>Geeks for Geeks for information - <a href="https://www.geeksforgeeks.org/dsa/xor-basis-algorithm">Read here</a> </li>
+            <li>Google websites for examples..</li>
+            <li>Codeforces</li>
+        </ol>
+    </section>
+
+    </article>
+  </div>
+
+  <footer>
+    <p>© 2025 DailyU Blog</p>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.getElementById('toggleModeBtn');
+      const body = document.body;
+
+      const savedMode = localStorage.getItem('mode');
+      if (savedMode === 'light') {
+        body.classList.add('light-mode');
+        toggleBtn.textContent = 'Switch to Dark Mode';
+      } else {
+        toggleBtn.textContent = 'Switch to Light Mode';
+      }
+
+      toggleBtn.addEventListener('click', () => {
+        body.classList.toggle('light-mode');
+        const isLight = body.classList.contains('light-mode');
+        localStorage.setItem('mode', isLight ? 'light' : 'dark');
+        toggleBtn.textContent = isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+      });
+    });
+  </script>
+</body>
+</html>
