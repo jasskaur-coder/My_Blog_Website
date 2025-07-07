@@ -134,6 +134,35 @@ nav a[aria-current="page"] {
   box-shadow: 0 4px 12px rgba(0, 255, 255, 0.3);
 }
 
+
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    padding: 3rem 4rem;
+  }
+
+  .blog-card {
+    padding: 2.2rem;
+    font-size: 1.05rem;
+  }
+
+  header h1 {
+    font-size: 2.4rem;
+  }
+
+  .profile-pic {
+    width: 280px;
+    height: 280px;
+  }
+
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1280px; /* was 1400px */
+    margin: 0 auto;
+  }
+}
+
+
 @media (max-width: 768px) {
   .profile {
     flex-direction: column;
