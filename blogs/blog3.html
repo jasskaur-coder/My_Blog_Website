@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Day 2 – Tired but Trying | DailyU Blog</title>
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="icon" href="../images/favicon.png" type="image/png" />
@@ -10,6 +11,11 @@
       color: #0ff;
       font-style: italic;
       margin-bottom: 1rem;
+    }
+
+    #guessFeedback
+    {
+      margin-top: 1rem;
     }
     .game {
       background: #1c1c1c;
@@ -86,7 +92,7 @@
         <p><strong>Hint:</strong> A common 6-letter word used in web development.</p>
         <input type="text" id="guessInput" placeholder="Your guess here..." />
         <button onclick="checkGuess()">Submit</button>
-        <p id="guessFeedback" style="margin-top:1rem;"></p>
+        <p id="guessFeedback"></p>
         <p id="guessTries"></p>
       </section>
     </article>

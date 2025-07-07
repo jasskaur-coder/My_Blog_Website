@@ -2,177 +2,200 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Day 9 – Story Time - The Odd Return | DailyU Blog</title>
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="icon" href="../images/favicon.png" type="image/png" />
 
-  <style>
-    body {
-      background-color: #111;
-      color: #eee;
-      font-family: Arial, sans-serif;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      margin: 0;
-      padding: 1rem;
-    }
+ <style>
+  body {
+    background-color: #111;
+    color: #eee;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0;
+    padding: 1rem;
+  }
 
-    header {
-      background-color: #111;
-      color: #eee;
-      padding: 1rem;
-    }
+  header {
+    background-color: #111;
+    color: #eee;
+    padding: 1rem;
+  }
 
-    header h1 {
-      margin: 0;
-      font-size: clamp(1.5rem, 4vw, 2.5rem);
-      color: #0ff;
-      text-align: center;
-    }
+  header h1 {
+    margin: 0;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: #0ff;
+    text-align: center;
+  }
 
-    .header-second-line {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      margin-top: 1rem;
-    }
+  .header-second-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 1rem;
+  }
 
-    .back-center {
-      flex-grow: 1;
-      text-align: center;
-    }
+  .back-center {
+    flex-grow: 1;
+    text-align: center;
+  }
 
-    .header-second-line button {
-      position: absolute;
-      right: 0;
-      background-color: #0ff;
-      color: #111;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
+  .header-second-line button {
+    position: absolute;
+    right: 0;
+    background-color: #0ff;
+    color: #111;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
 
-    .header-second-line button:hover {
-      background-color: #0ff;
-      color: #fff;
-    }
+  .header-second-line button:hover {
+    background-color: #0ff;
+    color: #fff;
+  }
 
-    nav a {
-      color: #0ff;
-      text-decoration: none;
-      font-weight: 600;
-    }
+  nav a {
+    color: #0ff;
+    text-decoration: none;
+    font-weight: 600;
+  }
 
-    nav a:hover {
-      text-decoration: underline;
-      color: #0ff;
-    }
+  nav a:hover {
+    text-decoration: underline;
+    color: #0ff;
+  }
 
-    footer {
-      width: 100%;
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #888;
-    }
+  footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #888;
+  }
 
-    .date {
-      color: #0ff;
-      font-style: italic;
-      margin-bottom: 1rem;
-    }
+  .date {
+    color: #0ff;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
 
-    .section-box {
-      background: #111;
-      padding: 1.5rem;
-      border-left: 5px solid #0ff;
-      border-radius: 12px;
-      margin-top: 2rem;
-      color: #eee;
-    }
+  .section-box {
+    background: #111;
+    padding: 1.5rem;
+    border-left: 5px solid #0ff;
+    border-radius: 12px;
+    margin-top: 2rem;
+    color: #eee;
+  }
 
-    .section-box h3 {
-      margin-top: 0;
-    }
+  .section-box h3 {
+    margin-top: 0;
+  }
 
-    /* Light mode styles */
-    body.light-mode {
-      background-color: #f0f0f0;
-      color: #111;
-    }
+  /* Light mode */
+  body.light-mode {
+    background-color: #f0f0f0;
+    color: #111;
+  }
 
-    body.light-mode header {
-      background-color: #fff;
-      color: #000 !important;
-    }
+  body.light-mode header {
+    background-color: #fff;
+    color: #000 !important;
+  }
 
-    body.light-mode header h1,
-    body.light-mode .date {
-      color: #000 !important;
-    }
+  body.light-mode header h1,
+  body.light-mode .date {
+    color: #000 !important;
+  }
 
-    body.light-mode .header-second-line button,
-    body.light-mode nav a {
-      color: #000 !important;
-    }
+  body.light-mode nav a,
+  body.light-mode .header-second-line button {
+    color: #000 !important;
+  }
 
-    body.light-mode footer {
-      background-color: #f0f0f0;
-      color: #111;
-    }
+  body.light-mode footer {
+    background-color: #f0f0f0;
+    color: #111;
+  }
 
-    body.light-mode .section-box {
-      background: #fff;
-      color: #222;
-      border-left-color: #0cc;
-      box-shadow: 0 0 12px #0cc8;
-    }
+  body.light-mode .section-box {
+    background: #fff;
+    color: #222;
+    border-left-color: #0cc;
+    box-shadow: 0 0 12px #0cc8;
+  }
 
-    body.light-mode nav a {
-      color: #005577;
-    }
+  body.light-mode nav a {
+    color: #005577;
+  }
 
-    body.light-mode nav a:hover {
-      color: #003344;
-    }
+  body.light-mode nav a:hover {
+    color: #003344;
+  }
 
-    body.light-mode .header-second-line button {
-      background-color: #005577;
-      color: #fff;
-    }
+  body.light-mode .header-second-line button {
+    background-color: #005577;
+    color: #fff;
+  }
 
-    body.light-mode .header-second-line button:hover {
-      background-color: #003344;
-      color: #fff;
-    }
+  body.light-mode .header-second-line button:hover {
+    background-color: #003344;
+    color: #fff;
+  }
 
+  /* Glassmorphism + Safari fix */
+  .blog-card,
+  .glass-effect,
+  #spiderWebOverlay {
+    -webkit-backdrop-filter: blur(8px); /* Safari first */
+     backdrop-filter: blur(8px);         /* Then standard */
 
-    /* Spider Web Overlay */
-    #spiderWebOverlay {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(17, 17, 17, 0.8);
-      backdrop-filter: blur(4px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-      transition: opacity 0.8s ease;
-      cursor: pointer;
-    }
+  }
 
-    #spiderWebOverlay img {
-      max-width: 80%;
-      height: auto;
-      opacity: 0.85;
-      pointer-events: none;
-      user-select: none;
-    }
-  </style>
+  .blog-card {
+    background-color: rgba(28, 28, 28, 0.6);
+    border-left: 5px solid #0ff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 255, 255, 0.2);
+  }
+
+  .glass-effect {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  /* Spider Web Overlay */
+  #spiderWebOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 17, 17, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: opacity 0.8s ease;
+    cursor: pointer;
+  }
+
+  #spiderWebOverlay img {
+    max-width: 80%;
+    height: auto;
+    opacity: 0.85;
+    pointer-events: none;
+    -webkit-user-select: none; /* ✅ Safari */
+    user-select: none;
+  }
+</style>
+
 </head>
 <body>
 

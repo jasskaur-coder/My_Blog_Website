@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Day 2 – Low Feels, Black Coffee & Python | DailyU Blog</title>
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="icon" href="../images/favicon.png" type="image/png" />
@@ -18,10 +19,22 @@
       border-radius: 12px;
       margin-top: 2rem;
       color: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2.5rem;
+      /* style="display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; margin-top: 2.5rem; */
     }
     .coffee-box span {
       font-weight: bold;
       color: #0ff;
+    }
+    .coffee-box-content{
+      /* style="flex: 1; min-width: 240px; */
+       flex: 1;
+       min-width: 240px;
     }
     button {
       background-color: #0ff;
@@ -33,6 +46,30 @@
       cursor: pointer;
       margin-top: 1rem;
       transition: background-color 0.3s ease;
+    }
+    
+    .coffeeFact
+    {
+      margin-top: 1rem;
+    }
+    .image{
+      /* style="flex: 0 0 200px; text-align: right;" */
+      flex: 0 0 200px;
+      text-align: right;
+    }
+
+    .images{
+      /* style="max-width: 100%; border-radius: 12px; box-shadow: 0 0 12px #0ff4;"  */
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 12px #0ff4;
+
+    }
+    .coffee-MVP{
+      /* style="font-style: italic; font-size: 0.85rem; margin-top: 0.5rem; */
+      font-style: italic;
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
     }
     button:hover {
       background-color: #00cccc;
@@ -65,20 +102,20 @@
       </section>
 
      <!-- Coffee Corner Section with Right-Aligned Image -->
-     <section class="coffee-box" style="display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; margin-top: 2.5rem;">
-       <div style="flex: 1; min-width: 240px;">
+     <section class="coffee-box">
+       <div class="coffee-box-content">
        <h3>☕ Coffee Corner</h3>
        <p>Today’s survival fuel? <strong>Black coffee. No sugar. Just vibes.</strong></p>
        <p>Exams got me running low, but this bitter magic kept me alive. Honestly, I don’t even count cups anymore... but today? I hit a personal streak.</p>
        <p><em>Max streak so far:</em> <strong>8 cups</strong> 😳 (and yes, all black).</p>
        <button onclick="revealCoffeeFact()">Reveal a Coffee Fun Fact!</button>
-       <p id="coffeeFact" style="margin-top:1rem;"></p>
+       <p id="coffeeFact"></p>
      </div>
 
-  <div style="flex: 0 0 200px; text-align: right;">
+  <div class="image">
     <img src="../images/coffee.jpg" alt="Coffee Cup" 
-         style="max-width: 100%; border-radius: 12px; box-shadow: 0 0 12px #0ff4;" />
-    <p style="font-style: italic; font-size: 0.85rem; margin-top: 0.5rem;">Coffee MVP of the day ☕</p>
+         class="images"/>
+    <p class="coffee-MVP">Coffee MVP of the day ☕</p>
   </div>
 </section>
 

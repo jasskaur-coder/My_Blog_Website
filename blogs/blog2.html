@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Learning WEB DEVELOPMENT AKA FRONTEND</title>
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="icon" href="../images/favicon.png" type="image/png" />
@@ -28,6 +29,15 @@
       gap: 1rem;
       justify-content: center;
       margin-top: 1rem;
+    }
+
+    #pollResult
+    {
+        margin-top:1rem;
+    }
+
+    #commentsSection{
+       margin-top:1rem;
     }
     .social-icons a img {
       width: 32px;
@@ -98,9 +108,10 @@
           <label><input type="radio" name="learning" value="Books"> Books</label><br />
           <label><input type="radio" name="learning" value="Practice Projects"> Practice Projects</label><br />
           <label><input type="radio" name="learning" value="Online Courses"> Online Courses</label><br />
-          <button onclick="showPollResult()">Vote</button>
+          <button type="button" onclick="submitComment()">Post Comment</button>
+
         </form>
-        <p id="pollResult" style="margin-top:1rem;"></p>
+        <p id="pollResult"></p>
       </section>
 
       <!-- Comments Section -->
@@ -108,7 +119,7 @@
         <p>💬 Want to share your learning journey or ask me questions? Comment below! (Don't forget to tell me you lovely Name)</p>
         <textarea id="commentBox" placeholder="Write your comment here..."></textarea>
         <button onclick="submitComment()">Post Comment</button>
-        <div id="commentsSection" style="margin-top:1rem;"></div>
+        <div id="commentsSection"></div>
       </section>
 
     </article>

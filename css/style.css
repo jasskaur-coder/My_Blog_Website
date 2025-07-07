@@ -144,6 +144,42 @@ nav a[aria-current="page"] {
   }
 }
 
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    padding: 3rem;
+  }
+
+  .blog-card {
+    padding: 2.5rem;
+    font-size: 1.05rem;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  .profile {
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1400px;
+    gap: 2.5rem;
+  }
+
+  .blog-card {
+    padding: 3rem;
+  }
+
+  .profile-pic {
+    width: 300px;
+    height: 300px;
+  }
+}
+
 /*Form Styling*/
 input[type="text"],
 input[type="email"],
