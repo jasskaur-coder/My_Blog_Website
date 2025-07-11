@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 26 – What AI Can’t Replace | DailyU Blog</title>
+  <link rel="icon" href="../images/favicon.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .container {
+      margin: auto;
+      padding: 1rem;
+    }
+
+    header {
+      background-color: #111;
+      color: #eee;
+      padding: 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      color: #0ff;
+      text-align: center;
+    }
+
+    .header-second-line {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-top: 1rem;
+    }
+
+    .back-center {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .header-second-line button {
+      position: absolute;
+      right: 0;
+      background-color: #0ff;
+      color: #111;
+      border: none;
+      padding: 10px 10px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .header-second-line button:hover {
+      background-color: #0cc;
+      color: #fff;
+    }
+
+    .date {
+      color: #0ff;
+      font-style: italic;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+
+    .section-box {
+      background: #111;
+      padding: 1.5rem;
+      border-left: 5px solid #0ff;
+      border-radius: 12px;
+      margin-top: 2rem;
+    }
+
+    .section-box h3 {
+      margin-top: 0;
+    }
+
+    footer {
+      width: 100%;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    a {
+      color: #0ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #0cc;
+    }
+    body.light-mode {
+      background-color: #f0f0f0;
+      color: #111;
+    }
+
+    body.light-mode header {
+      background-color: #fff;
+      color: #000;
+    }
+
+    body.light-mode header h1,
+    body.light-mode .date {
+      color: #000;
+    }
+
+    body.light-mode .header-second-line button {
+      background-color: #070707;
+      color: #fff;
+    }
+
+    body.light-mode .header-second-line button:hover {
+      background-color: #52a0b9;
+    }
+
+    body.light-mode .back-button{
+      color: #000;
+    }
+
+    body.light-mode .section-box {
+      background: #fff;
+      color: #222;
+      border-left-color: #0cc;
+      box-shadow: 0 0 12px #0cc8;
+    }
+
+    body.light-mode .sort-table thead th {
+      background-color: #ddd;
+      color: #111;
+    }
+
+    body.light-mode .sort-table td {
+      background-color: #fff;
+      color: #111;
+    }
+
+    body.light-mode a {
+      color: #005577;
+    }
+
+    body.light-mode a:hover {
+      color: #003344;
+    }
+
+    @media (max-width: 600px) {
+      .header-second-line {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header-second-line button {
+        position: static;
+        margin-top: 1rem;
+        width: 100%;
+      }
+      .date{
+         font-size: 0.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Day 26 – "What AI Can’t Replace: The Human Skills That Still Matter" </h1>
+    <div class="header-second-line">
+      <nav class="back-center">
+        <a class = "back-button" href="../home.html">← Back</a>
+      </nav>
+      <button id="toggleModeBtn">Switch to Light Mode</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <article>
+      <p class="date">July 11, 2025</p>
+    <section class="section-box">
+            <p>
+            AI’s doing wild things - writing code, making art, even spotting diseases before doctors do... It’s fast, it’s smart, and yeah, it’s everywhere. Feels like everything’s getting automated these days. But here’s the thing no one says loud enough: not everything <strong>should</strong> be.
+            </p>
+            <p>
+            The stuff that actually makes us human - like empathy, creativity, gut instinct, emotional depth - AI just can’t fake that. Not really. It doesn’t feel stories, it doesn’t wrestle with morals, and it definitely doesn’t dream at 2 AM like we do. In a world racing to become more artificial, maybe being real is the flex.
+            </p>
+            <p>
+            This post isn’t some “AI is coming for your job” drama. It’s a reminder — we still lead where it matters. Let’s talk about the things that no machine can steal from us. The human edge that still hits different.
+            </p>
+
+    </section>
+    <section class="section-box">
+          <h2>Real Life Impact Studies - </h2>
+          <ul>
+            <li>
+                <h4>Where Humans Still Have the Edge on AI by Marc Zao-Sanders</h4>
+                <p>Since ChatGPT’s launch two years ago, generative AI (gen AI) has been promising to reshape how work gets done. The use cases are many and varied, and we’re still discovering what’s going to work best, for us as individuals, in teams, and as organizations. In a surprising twist, it’s the white-collar work of the office that seems to be more imminently replaceable than the blue-collar work of the field and factory.</p>
+            </li>
+            <li>
+                <h4>The Skills Your Employees Need to Work Effectively with AI by Nada R. Sanders and John D. Wood</h4>
+                <p>Right now, the corporate world is in the throes of a generative AI hype cycle. Leaders have been inundated with speculation about the technology’s potential to transform work. However, this raises an entirely new sets of problems for leaders: They now understand that the future will involve humans working with AI and feel immense pressure to “do something” to implement AI solutions. But how do they actually integrate AI with their workforce to achieve good business outcomes?</p>
+            </li>
+          </ul> 
+    </section>
+    <section class="section-box">
+        <h2>Tech Deep Dive: 3 Breakthroughs That Could Define the Next Decade</h2>
+
+        <h3>1. Structural Battery Composites</h3>
+        <p><strong>Why it matters:</strong> Electric vehicles and drones still rely on bulky, separate batteries. These new materials act as both structural components and energy storage units - meaning lighter, more efficient designs without sacrificing power.</p>
+        <p><strong>Real-world impact:</strong> A game-changer for reducing carbon emissions in transport and aviation sectors. If cars can store energy in their frame, battery weight can drop dramatically.</p>
+        <p><strong>Where it’s headed:</strong> Researchers at Chalmers University of Technology (Sweden) are already testing composites in prototypes. Expected commercial testing within 3–5 years in aerospace and EV sectors.</p>
+
+        <h3>2. Generative Watermarking</h3>
+        <p><strong>Why it matters:</strong> With AI-generated content flooding the web, knowing what’s real vs. synthetic is becoming harder. Generative watermarking inserts invisible markers in AI media to verify authenticity.</p>
+        <p><strong>Real-world impact:</strong> Helps detect deepfakes, fake news, and misinformation campaigns - especially critical during elections, war reporting, and education.</p>
+        <p><strong>Where it’s headed:</strong> Google DeepMind and OpenAI are working on embedding watermarks in text and images. Integration in AI tools is expected within 2–3 years.</p>
+
+        <h3>3. Green Nitrogen Fixation</h3>
+        <p><strong>Why it matters:</strong> Fertilizer production (via Haber-Bosch) accounts for 1-2% of global carbon emissions. New methods using microbes or renewable electricity can synthesize ammonia sustainably.</p>
+        <p><strong>Real-world impact:</strong> Critical for food security and climate change. Especially relevant to countries with large agricultural sectors and growing populations.</p>
+        <p><strong>Where it’s headed:</strong> Startups like NitroFix and university labs are piloting early systems. Large-scale viability expected within 5 years with clean energy input.</p>
+
+        <h3>💡 Your Move</h3>
+        <p>These aren’t just ideas - they’re shaping the future right now. If you're a student, creator, or curious learner, ask yourself:</p>
+        <ul>
+            <li>Can I follow one of these projects or labs on GitHub or LinkedIn?</li>
+            <li>Could I pitch a mini research idea in class or build a prototype version?</li>
+            <li>What kind of future do I want to help design?</li>
+        </ul>
+        <p>The next big wave of innovation won’t just be coded - it’ll be imagined, questioned, and reshaped by people like you.</p>
+        </section>
+        <section class ="section-box">
+            <h2>How scientists are trying to use AI to unlock the human mind</h2>
+            <p>But neural networks are, after all, neural-they’re inspired by brains. Despite their vastly different appetites for energy and data, large language models and human brains do share a good deal in common. They’re both made up of millions of subcomponents: biological neurons in the case of the brain, simulated “neurons” in the case of networks. They’re the only two things on Earth that can fluently and flexibly produce language. And scientists barely understand how either of them works.</p>
+              
+        </section>
+        <section class="section-box">
+            <h3>Resources I used for this blog - </h3>
+            <ol>
+               <li>Harvard Business Review (HBR) <a href="https://hbr.org">Read here</a></li>
+               <li>World Economic Forum (WEF) <a href="https://reports.weforum.org/docs/WEF_Top_10_Emerging_Technologies_of_2025.pdf">Read here</a></li>
+               <li>Various Websites for AI and Tech <a href="https://www.technologyreview.com">Read here</a></li>
+            </ol>
+        </section>
+
+  </article>
+  </div>
+
+  <footer>
+    <p>© 2025 DailyU Blog</p>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.getElementById('toggleModeBtn');
+      const body = document.body;
+
+      const savedMode = localStorage.getItem('mode');
+      if (savedMode === 'light') {
+        body.classList.add('light-mode');
+        toggleBtn.textContent = 'Switch to Dark Mode';
+      } else {
+        toggleBtn.textContent = 'Switch to Light Mode';
+      }
+
+      toggleBtn.addEventListener('click', () => {
+        body.classList.toggle('light-mode');
+        const isLight = body.classList.contains('light-mode');
+        localStorage.setItem('mode', isLight ? 'light' : 'dark');
+        toggleBtn.textContent = isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+      });
+    });
+  </script>
+</body>
+</html>
