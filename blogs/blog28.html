@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 27 – “How Writing Daily Changed the Way I Think” | DailyU Blog</title>
+  <link rel="icon" href="../images/favicon.png" type="image/png" />
+  <!-- <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet"> -->
+
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      margin: 0;
+      padding: 0;
+      /* font-family: 'Inter', sans-serif; */
+    }
+
+    .container {
+      margin: auto;
+      padding: 1rem;
+    }
+
+    header {
+      background-color: #111;
+      color: #eee;
+      padding: 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      color: #0ff;
+      text-align: center;
+    }
+
+    .header-second-line {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-top: 1rem;
+    }
+
+    .back-center {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .header-second-line button {
+      position: absolute;
+      right: 0;
+      background-color: #0ff;
+      color: #111;
+      border: none;
+      padding: 10px 10px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .header-second-line button:hover {
+      background-color: #0cc;
+      color: #fff;
+    }
+
+    .date {
+      color: #0ff;
+      font-style: italic;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+
+    .section-box {
+      background: #111;
+      padding: 1.5rem;
+      border-left: 5px solid #0ff;
+      border-radius: 12px;
+      margin-top: 2rem;
+    }
+
+    .section-box h3 {
+      margin-top: 0;
+    }
+
+    footer {
+      width: 100%;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    a {
+      color: #0ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #0cc;
+    }
+    body.light-mode {
+      background-color: #f0f0f0;
+      color: #111;
+    }
+
+    body.light-mode header {
+      background-color: #fff;
+      color: #000;
+    }
+
+    body.light-mode header h1,
+    body.light-mode .date {
+      color: #000;
+    }
+
+    body.light-mode .header-second-line button {
+      background-color: #070707;
+      color: #fff;
+    }
+
+    body.light-mode .header-second-line button:hover {
+      background-color: #52a0b9;
+    }
+
+    body.light-mode .back-button{
+      color: #000;
+    }
+
+    body.light-mode .section-box {
+      background: #fff;
+      color: #222;
+      border-left-color: #0cc;
+      box-shadow: 0 0 12px #0cc8;
+    }
+
+    body.light-mode .sort-table thead th {
+      background-color: #ddd;
+      color: #111;
+    }
+
+    body.light-mode .sort-table td {
+      background-color: #fff;
+      color: #111;
+    }
+
+    body.light-mode a {
+      color: #005577;
+    }
+
+    body.light-mode a:hover {
+      color: #003344;
+    }
+
+    @media (max-width: 600px) {
+      .header-second-line {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header-second-line button {
+        position: static;
+        margin-top: 1rem;
+        width: 100%;
+      }
+      .date{
+         font-size: 0.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Day 27 – “How Writing Daily Changed the Way I Think” </h1>
+    <div class="header-second-line">
+      <nav class="back-center">
+        <a class = "back-button" href="../home.html">← Back</a>
+      </nav>
+      <button id="toggleModeBtn">Switch to Light Mode</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <article>
+        <p class="date">July 13, 2025</p>
+        <section class="section-box">
+                <p>
+                 If I clearly remember, I started writing in my School Days - a time that remains one of the most precious phases of my life to this day. I was struggling with exams, board pressure, and all the chaos that comes with it. Of course, those things put immense pressure on the mind.
+                </p>
+                <p>
+                There was a lot going on in my head… how to study, how I would manage everything. And then, one day, I wrote a small quote. If I recall correctly, it was:
+                <strong>"Don’t trust anyone, not even your shadow… because it stays with you only as long as there is light."</strong>
+                </p>
+                <p>
+                I don’t know how that thought came to me, but I wrote it down and posted it on Instagram.
+                Day by day, I started writing more quotes. One of my favourites is:
+                <br>
+                <strong>"Hard work along with smart work, in the right direction with focus, is the key to success."</strong>
+                </p>
+                <p>
+                    So every time I got stuck, I started writing - and surprise, surprise… it saved me. Every single time......
+                </p>
+                <p>
+                    Sometimes, I think my writing skills aren’t that great. Maybe they’re just average. But then the second thought always hits me: <em>I’m not craving perfection in writing.</em>
+                    <br>
+                    It’s my <strong>passion</strong>, the one thing that drives me - like a flowing river.
+                </p>
+
+        </section>
+
+  </article>
+  </div>
+
+  <footer>
+    <p>© 2025 DailyU Blog</p>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.getElementById('toggleModeBtn');
+      const body = document.body;
+
+      const savedMode = localStorage.getItem('mode');
+      if (savedMode === 'light') {
+        body.classList.add('light-mode');
+        toggleBtn.textContent = 'Switch to Dark Mode';
+      } else {
+        toggleBtn.textContent = 'Switch to Light Mode';
+      }
+
+      toggleBtn.addEventListener('click', () => {
+        body.classList.toggle('light-mode');
+        const isLight = body.classList.contains('light-mode');
+        localStorage.setItem('mode', isLight ? 'light' : 'dark');
+        toggleBtn.textContent = isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+      });
+    });
+  </script>
+</body>
+</html>
