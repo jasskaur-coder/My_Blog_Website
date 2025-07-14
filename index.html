@@ -105,6 +105,52 @@
         box-shadow: 0 0 40px #0ff, inset 0 0 15px #0ff;
       }
     }
+
+
+    @media (max-width: 768px) {
+  .welcome-box {
+    padding: 30px 20px;
+    transform: scale(0.8) rotateX(90deg);
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .typewriter {
+    font-size: 1rem;
+    max-width: 95vw;
+  }
+
+  #skip {
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-box {
+    padding: 20px 15px;
+    transform: scale(0.9) rotateX(90deg);
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .typewriter {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  #skip {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
   </style>
 </head>
 <body>
