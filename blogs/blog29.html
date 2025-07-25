@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Day 20 – “Frameworks? I Picked Tailwind..., and Here's Why” | DailyU Blog</title>
+  <title>Day 28 – “12 Days Later – What Changed?” | DailyU Blog</title>
   <link rel="icon" href="../images/favicon.png" type="image/png" />
   <!-- <link rel="stylesheet" href="../css/style.css" /> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet"> -->
+
   <style>
     body {
       background-color: #111;
@@ -14,6 +16,7 @@
       transition: background-color 0.3s ease, color 0.3s ease;
       margin: 0;
       padding: 0;
+      /* font-family: 'Inter', sans-serif; */
     }
 
     .container {
@@ -53,7 +56,7 @@
       background-color: #0ff;
       color: #111;
       border: none;
-      padding: 10px 20px;
+      padding: 10px 10px;
       border-radius: 8px;
       font-weight: bold;
       cursor: pointer;
@@ -69,6 +72,8 @@
       color: #0ff;
       font-style: italic;
       margin-bottom: 1rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
     }
 
     .section-box {
@@ -99,7 +104,55 @@
     a:hover {
       color: #0cc;
     }
+
+
     body.light-mode {
+    background-color: #f0f0f0;
+    color: #111;
+    }
+
+    body.light-mode header {
+    background-color: #fff;
+    color: #000;
+    }
+
+    body.light-mode header h1 {
+    color: #000;
+    }
+
+    body.light-mode .date {
+    color: #555;
+    }
+
+    body.light-mode .section-box {
+    background: #fff;
+    color: #111;
+    border-left-color: #0cc;
+    }
+
+    body.light-mode .header-second-line button {
+    background-color: #111;
+    color: #fff;
+    }
+
+    body.light-mode .header-second-line button:hover {
+    background-color: #444;
+    }
+
+    body.light-mode a {
+    color: #005577;
+    }
+
+    body.light-mode a:hover {
+    color: #003344;
+    }
+
+    body.light-mode .back-button {
+    color: #005577;
+    }
+
+
+    /* body.light-mode {
       background-color: #f0f0f0;
       color: #111;
     }
@@ -150,7 +203,7 @@
 
     body.light-mode a:hover {
       color: #003344;
-    }
+    } */
 
     @media (max-width: 600px) {
       .header-second-line {
@@ -163,12 +216,15 @@
         margin-top: 1rem;
         width: 100%;
       }
+      .date{
+         font-size: 0.6rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Day 20 – “Frameworks? I Picked Tailwind..., and Here's Why”</h1>
+    <h1>Day 28 – “12 Days Later – What Changed?” </h1>
     <div class="header-second-line">
       <nav class="back-center">
         <a class = "back-button" href="../home.html">← Back</a>
@@ -179,54 +235,68 @@
 
   <div class="container">
     <article>
-      <p class="date">July 1, 2025</p>
-    <section class="section-box">
-        <h3>🎯 Frameworks? Let’s Talk About Tailwind CSS</h3>
-        <p>
-            When people say frameworks, most think of React, Angular, or Vue…  
-            But my fav? Tailwind CSS.  
-        </p>
-        <p>
-            It’s not a JavaScript framework, it’s a utility-first CSS framework that literally changed how I write UI.
-        </p>
-        <p>
-            Instead of writing long CSS files or switching between HTML and stylesheets, I just write everything directly in class names fast, consistent, and kinda good...
-        </p>
-        <p>
-            The best part? I don’t have to invent class names like <code>.card-box-centered-blue-v2</code> anymore...
-            Tailwind already gives me all the utilities I need -margin, padding, colors, responsiveness....
-        </p>
-        <p>
-            It feels like designing in code. And honestly? I love it.
-        </p>
-    </section>
+        <p class="date">July 25, 2025</p>
+        <section class="section-box">
+                <p>
+                    Since I’ve started writing again, these 12 days have been all about trying to figure things out - whether it’s in my projects or in life...
+                </p>
+                <p>
+                   I've been doing a lot of stuff - sometimes I fail at it, sometimes I win.....
+                </p>
+                <p>
+                   It gives me relief at times, but sometimes it overwhelms me too....
+                </p>
+                <p>
+                   There’s still a lot I want to explore and understand more deeply..
+                </p>   
+        </section>
+        <section class="section-box">
+                <h3>Tech Update...</h3>
+                <p>
+                    Aside from all that, I made a small spin game for my blog website - now you can pick a random blog to read just by spinning the wheel...
+                </p>
+                <p>
+                    It’s just a little fun element I added, and I’ll try to create more interactive features like this soon...
+                </p>
+                <p>
+                    See the spin game here..<br>
+                    You can found it at the Navigation Bar too... <br>
+                    <a href="../spin.html">🎡 Spin Game</a>
+                </p>
+                <p> </p>
+        </section>
 
-    </article>
+  </article>
   </div>
 
   <footer>
     <p>© 2025 DailyU Blog</p>
   </footer>
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggleBtn = document.getElementById('toggleModeBtn');
-      const body = document.body;
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById('toggleModeBtn');
+  const body = document.body;
 
-      const savedMode = localStorage.getItem('mode');
-      if (savedMode === 'light') {
-        body.classList.add('light-mode');
-        toggleBtn.textContent = 'Switch to Dark Mode';
-      } else {
-        toggleBtn.textContent = 'Switch to Light Mode';
-      }
+  function updateModeText() {
+    toggleBtn.textContent = body.classList.contains('light-mode') 
+      ? 'Switch to Dark Mode' 
+      : 'Switch to Light Mode';
+  }
 
-      toggleBtn.addEventListener('click', () => {
-        body.classList.toggle('light-mode');
-        const isLight = body.classList.contains('light-mode');
-        localStorage.setItem('mode', isLight ? 'light' : 'dark');
-        toggleBtn.textContent = isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';
-      });
-    });
+  // Load mode from localStorage
+  if (localStorage.getItem('mode') === 'light') {
+    body.classList.add('light-mode');
+  }
+  updateModeText();
+
+  // Toggle on click
+  toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('light-mode');
+    localStorage.setItem('mode', body.classList.contains('light-mode') ? 'light' : 'dark');
+    updateModeText();
+  });
+});
+
   </script>
 </body>
 </html>
