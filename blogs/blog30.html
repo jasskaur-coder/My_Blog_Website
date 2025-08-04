@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 28 – “12 Days Later – What Changed?” | DailyU Blog</title>
+  <link rel="icon" href="../images/favicon.png" type="image/png" />
+  <!-- <link rel="stylesheet" href="../css/style.css" /> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet"> -->
+
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      margin: 0;
+      padding: 0;
+      /* font-family: 'Inter', sans-serif; */
+    }
+
+    .container {
+      margin: auto;
+      padding: 1rem;
+    }
+
+    header {
+      background-color: #111;
+      color: #eee;
+      padding: 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      color: #0ff;
+      text-align: center;
+    }
+
+    .header-second-line {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-top: 1rem;
+    }
+
+    .back-center {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .header-second-line button {
+      position: absolute;
+      right: 0;
+      background-color: #0ff;
+      color: #111;
+      border: none;
+      padding: 10px 10px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .header-second-line button:hover {
+      background-color: #0cc;
+      color: #fff;
+    }
+
+    .date {
+      color: #0ff;
+      font-style: italic;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+
+    .section-box {
+      background: #111;
+      padding: 1.5rem;
+      border-left: 5px solid #0ff;
+      border-radius: 12px;
+      margin-top: 2rem;
+    }
+
+    .section-box h3 {
+      margin-top: 0;
+    }
+
+    footer {
+      width: 100%;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    #git-workflow {
+      background-color: #222;
+      color: #0ff;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    a {
+      color: #0ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #0cc;
+    }
+
+
+    body.light-mode {
+    background-color: #f0f0f0;
+    color: #111;
+    }
+
+    body.light-mode header {
+    background-color: #fff;
+    color: #000;
+    }
+
+    body.light-mode header h1 {
+    color: #000;
+    }
+
+    body.light-mode .date {
+    color: #555;
+    }
+
+    body.light-mode .section-box {
+    background: #fff;
+    color: #111;
+    border-left-color: #0cc;
+    }
+
+    body.light-mode .header-second-line button {
+    background-color: #111;
+    color: #fff;
+    }
+
+    body.light-mode .header-second-line button:hover {
+    background-color: #444;
+    }
+
+    body.light-mode a {
+    color: #005577;
+    }
+
+    body.light-mode a:hover {
+    color: #003344;
+    }
+
+    body.light-mode .back-button {
+    color: #005577;
+    }
+
+    
+
+    @media (max-width: 600px) {
+      .header-second-line {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header-second-line button {
+        position: static;
+        margin-top: 1rem;
+        width: 100%;
+      }
+      .date{
+         font-size: 0.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Day 29 – “Git & GitHub – A Beginner’s Guide to Smarter Coding” </h1>
+    <div class="header-second-line">
+      <nav class="back-center">
+        <a class = "back-button" href="../home.html">← Back</a>
+      </nav>
+      <button id="toggleModeBtn">Switch to Light Mode</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <article>
+        <p class="date">August 4, 2025</p>
+
+        <section class="section-box">
+        <h3>Git & GitHub</h3>
+        <p>Let’s talk about two tools that changed the way developers collaborate: Git and GitHub.</p>
+        </section>
+
+        <section class="section-box">
+        <h3>Why Version Control?</h3>
+        <ul>
+            <li>Track changes in your code</li>
+            <li>Revert if something breaks</li>
+            <li>Collaborate safely</li>
+            <li>Keep your code online & backed up</li>
+        </ul>
+        </section>
+
+        <section class="section-box">
+        <h3>What is Git?</h3>
+        <p>Git is a local version control tool that helps track changes in your code.</p>
+        <ul>
+            <li>Installed on your system</li>
+            <li>Lets you commit, rollback, and branch</li>
+        </ul>
+        </section>
+
+        <section class="section-box">
+        <h3>What is GitHub?</h3>
+        <p>GitHub is a cloud platform to host your Git repositories.</p>
+        <ul>
+            <li>Share your code (public or private)</li>
+            <li>Work with teams or contribute to projects</li>
+            <li>Store documentation like README, Issues, etc.</li>
+        </ul>
+        <p><strong>Think of Git as your tool, and GitHub as where your project lives online.</strong></p>
+        </section>
+
+        <section class="section-box">
+        <h3>Git Workflow</h3>
+        <pre id = "git-workflow">
+        Write Code → Save File → git add → git commit → git push → GitHub
+        </pre>
+        </section>
+
+        <section class="section-box">
+        <h3>Basic Git Concepts</h3>
+        <ul>
+            <li><strong>Repository:</strong> Folder tracked by Git</li>
+            <li><strong>Commit:</strong> Save point of your code</li>
+            <li><strong>Branch:</strong> A separate version</li>
+            <li><strong>Merge:</strong> Combine branches</li>
+            <li><strong>Clone:</strong> Download repo from GitHub</li>
+            <li><strong>Push:</strong> Upload changes to GitHub</li>
+            <li><strong>Pull:</strong> Get latest from GitHub</li>
+        </ul>
+        </section>
+
+        <section class="section-box">
+        <h3>Real-Life Example</h3>
+        <p><strong>Building a portfolio site?</strong></p>
+        <ul>
+            <li>You start a Git repo</li>
+            <li>Every change = one commit</li>
+            <li>Push to GitHub to share with others</li>
+        </ul>
+        </section>
+
+        <section class="section-box">
+        <h3>Quick Tip</h3>
+        <p>Always add a <code>README.md</code> with:</p>
+        <ul>
+            <li>What your project does</li>
+            <li>How to run it</li>
+            <li>Features or screenshots</li>
+        </ul>
+        </section>
+
+            
+
+  </article>
+  </div>
+
+  <footer>
+    <p>© 2025 DailyU Blog</p>
+  </footer>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById('toggleModeBtn');
+  const body = document.body;
+
+  function updateModeText() {
+    toggleBtn.textContent = body.classList.contains('light-mode') 
+      ? 'Switch to Dark Mode' 
+      : 'Switch to Light Mode';
+  }
+
+  // Load mode from localStorage
+  if (localStorage.getItem('mode') === 'light') {
+    body.classList.add('light-mode');
+  }
+  updateModeText();
+
+  // Toggle on click
+  toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('light-mode');
+    localStorage.setItem('mode', body.classList.contains('light-mode') ? 'light' : 'dark');
+    updateModeText();
+  });
+});
+
+  </script>
+</body>
+</html>
