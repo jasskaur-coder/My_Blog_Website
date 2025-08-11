@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 30 – “If Traffic Lights Worked Like C++ Programs” | DailyU Blog</title>
+  <link rel="icon" href="../images/favicon.png" type="image/png" />
+
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      margin: auto;
+      padding: 1rem;
+    }
+
+    header {
+      background-color: #111;
+      color: #eee;
+      padding: 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      color: #0ff;
+      text-align: center;
+    }
+
+    .header-second-line {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-top: 1rem;
+    }
+
+    .back-center {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .header-second-line button {
+      position: absolute;
+      right: 0;
+      background-color: #0ff;
+      color: #111;
+      border: none;
+      padding: 10px 10px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .header-second-line button:hover {
+      background-color: #0cc;
+      color: #fff;
+    }
+
+    .date {
+      color: #0ff;
+      font-style: italic;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+
+    .section-box {
+      background: #111;
+      padding: 1.5rem;
+      border-left: 5px solid #0ff;
+      border-radius: 12px;
+      margin-top: 2rem;
+    }
+
+    .section-box h3 {
+      margin-top: 0;
+    }
+
+    footer {
+      width: 100%;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    a {
+      color: #0ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #0cc;
+    }
+
+    body.light-mode {
+      background-color: #f0f0f0;
+      color: #111;
+    }
+
+    body.light-mode header {
+      background-color: #fff;
+      color: #000;
+    }
+
+    body.light-mode header h1 {
+      color: #000;
+    }
+
+    body.light-mode .date {
+      color: #555;
+    }
+
+    body.light-mode .section-box {
+      background: #fff;
+      color: #111;
+      border-left-color: #0cc;
+    }
+
+    body.light-mode .header-second-line button {
+      background-color: #111;
+      color: #fff;
+    }
+
+    body.light-mode .header-second-line button:hover {
+      background-color: #444;
+    }
+
+    body.light-mode a {
+      color: #005577;
+    }
+
+    body.light-mode a:hover {
+      color: #003344;
+    }
+
+    body.light-mode .back-button {
+      color: #005577;
+    }
+
+    @media (max-width: 600px) {
+      .header-second-line {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header-second-line button {
+        position: static;
+        margin-top: 1rem;
+        width: 100%;
+      }
+
+      .date {
+        font-size: 0.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Day 30 – “If Traffic Lights Worked Like C++ Programs”</h1>
+    <div class="header-second-line">
+      <nav class="back-center">
+        <a class="back-button" href="../home.html">← Back</a>
+      </nav>
+      <button id="toggleModeBtn">Switch to Light Mode</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <article>
+      <p class="date">August 11, 2025</p>
+
+      <section class="section-box">
+        <h3>What if…?</h3>
+        <p>I was waiting at a traffic light today and suddenly thought: what if this thing ran on C++? Spoiler: chaos, but very <em>fast</em> chaos.</p>
+      </section>
+
+      <section class="section-box">
+        <h3>#include&lt;traffic.h&gt;</h3>
+        <p>First hurdle - the light won’t even start unless someone remembered to include the right header file. Forget it, and the whole city freezes. <br>That's how life also works, right?... If we don't take right decision at the right time... The life won't give us opportunities....</p>
+      </section>
+
+      <section class="section-box">
+        <h3>Compilation Time</h3>
+        <p>Green wants to turn on? Too bad, it has to compile first. Meanwhile, everyone’s stuck: me, two bikers, and an uncle on a scooty just staring at each other... <br> So some times we need patience in our life to compile the right thing....</p>
+      </section>
+
+      <section class="section-box">
+        <h3>Segmentation Fault</h3>
+        <p>The light just dies mid-cycle. One car is halfway across, the rest are frozen. That’s undefined behavior on the streets. <br>Similarly life sometimes throw errors.. we just need to handle it...</p>
+      </section>
+
+      <section class="section-box">
+        <h3>Infinite Yellow Loop</h3>
+        <p>Ever seen a signal stuck on yellow forever? That’s <code>while(true)</code> in action. <br>Need to correct it as soon as possible or else it will cause traffic jam...and will destroy lives...</p>
+      </section>
+
+      <section class="section-box">
+        <h3>Pointers Gone Wrong</h3>
+        <p>Instead of changing <em>this</em> light, the program updates the one two streets away. Now my road is red, but somewhere else there’s complete anarchy. <br>So sometimes in life, we might focus our energy on the wrong place... while the real issue stays unsolved.</p>
+     </section>
+
+      <section class="section-box">
+        <h3>Final Thought</h3>
+        <p>If traffic lights worked like C++ programs, we’d all be late. But hey, when it actually ran, it would be the fastest green light you’ve ever seen. <br>So yeah..! sometimes we can be stuck in the problems... But when we are finally out of it... we will be the fastest one...</p>
+      </section>
+
+    </article>
+  </div>
+
+  <footer>
+    <p>© 2025 DailyU Blog</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.getElementById('toggleModeBtn');
+      const body = document.body;
+
+      function updateModeText() {
+        toggleBtn.textContent = body.classList.contains('light-mode') 
+          ? 'Switch to Dark Mode' 
+          : 'Switch to Light Mode';
+      }
+
+      if (localStorage.getItem('mode') === 'light') {
+        body.classList.add('light-mode');
+      }
+      updateModeText();
+
+      toggleBtn.addEventListener('click', () => {
+        body.classList.toggle('light-mode');
+        localStorage.setItem('mode', body.classList.contains('light-mode') ? 'light' : 'dark');
+        updateModeText();
+      });
+    });
+  </script>
+</body>
+</html>
