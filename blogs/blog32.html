@@ -163,13 +163,15 @@
         font-size: 0.6rem;
       }
 
-      .back-centerr{
-        align-items: center;
-      }
+    .back-center {
+        display: flex;        /* make it flexbox */
+        justify-content: center;
+        align-items: center;  /* vertical centering */
+    }
 
-      #toggleModebtn{
-        align-items: end;
-      }
+    #toggleModeBtn {
+        margin-left: auto;    /* pushes button to the end in flex */
+    }
     }
   </style>
 </head>
